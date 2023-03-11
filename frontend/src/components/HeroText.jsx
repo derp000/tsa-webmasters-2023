@@ -1,9 +1,16 @@
 import React from "react";
 
-const HeroText = ({ heading, title, body, images, reverseAlign }) => {
+const HeroText = ({ heading, title, body, images, reverseAlign, heroEnd }) => {
+  let bodyPadding = "";
+  if (heading && title) {
+    bodyPadding = "py-6";
+  } else if (heroEnd) {
+    bodyPadding = "mb-6";
+  }
+
   const heroBodyText = (
     <div
-      className="text-left py-6 lg:text-2xl text-2xl md:max-w-md lg:leading-loose leading-loose"
+      className={`text-left lg:text-2xl text-2xl md:max-w-md lg:leading-loose leading-loose ${bodyPadding}`}
       key="main_text"
     >
       {body}
@@ -34,12 +41,22 @@ const HeroText = ({ heading, title, body, images, reverseAlign }) => {
   return (
     <div className="hero h-fit bg-base-200 px-2">
       <div
-        className={`hero-content ${reverseAlign ? "text-right" : "text-left"}`}
+        className={`hero-content ${reverseAlign ? "text-right" : "text-left"} ${
+          !heading && !title ? "py-0" : ""
+        }`}
       >
         <div className="max-w-5xl">
-          <h6 className="md:text-2xl text-xl font-bold mt-10">{heading}</h6>
-          <h1 className="md:text-7xl text-5xl font-bold mt-2">{title}</h1>
-          <div className="md:inline-flex md:gap-10 md:mt-5 md:items-start">
+          {heading && (
+            <h6 className="md:text-2xl text-xl font-bold mt-10">{heading}</h6>
+          )}
+          {title && (
+            <h1 className="md:text-7xl text-5xl font-bold mt-2">{title}</h1>
+          )}
+          <div
+            className={`md:inline-flex md:gap-10 md:items-start ${
+              heading && title ? "md:mt-10" : ""
+            }`}
+          >
             {reverseAlign
               ? heroBody.reverse().map((hero) => hero)
               : heroBody.map((hero) => hero)}
