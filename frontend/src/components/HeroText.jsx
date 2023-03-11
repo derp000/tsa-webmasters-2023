@@ -1,11 +1,46 @@
-import React from "react";
+import { React, useEffect, useState } from "react";
 
-const HeroText = ({ heading, title, body, images, reverseAlign, heroEnd }) => {
-  let bodyPadding = "";
-  if (heading && title) {
-    bodyPadding = "py-6";
-  } else if (heroEnd) {
-    bodyPadding = "mb-6";
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height,
+  };
+}
+
+function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return windowDimensions;
+}
+
+const HeroText = ({
+  heading,
+  title,
+  body,
+  images,
+  reverseAlign,
+  multiHero,
+}) => {
+  // single hero case
+  let bodyPadding = "py-6";
+  if (multiHero) {
+    if (heading && title) {
+      bodyPadding = "mt-6";
+    } else {
+      bodyPadding = "mb-6 lg:mt-0 mt-6";
+    }
   }
 
   const heroBodyText = (
@@ -36,7 +71,11 @@ const HeroText = ({ heading, title, body, images, reverseAlign, heroEnd }) => {
       );
   }
 
+  const { width } = useWindowDimensions();
   const heroBody = [heroBodyText, heroImages];
+  if (reverseAlign || width < 1024) {
+    heroBody.reverse();
+  }
 
   return (
     <div className="hero h-fit bg-base-200 px-2">
@@ -57,9 +96,7 @@ const HeroText = ({ heading, title, body, images, reverseAlign, heroEnd }) => {
               heading && title ? "md:mt-10" : ""
             }`}
           >
-            {reverseAlign
-              ? heroBody.reverse().map((hero) => hero)
-              : heroBody.map((hero) => hero)}
+            {heroBody.map((hero) => hero)}
           </div>
         </div>
       </div>

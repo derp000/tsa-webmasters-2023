@@ -23,7 +23,7 @@ const vasimr = (
 );
 
 const bodyRecoverFirst = (
-  <p>
+  <>
     The rocket's crew capsule will separate from the rest of the rocket during
     reentry. The rest of the rocket will return to Kennedy Space Center and
     redock itself on a platform for reusability. The crew capsule will land in a
@@ -31,17 +31,30 @@ const bodyRecoverFirst = (
     landing sight will be determined two weeks before landing recovery based on
     the position of the spacecraft, weather conditions at splashdown sight, and
     availability of nearby rescue teams.
-  </p>
+  </>
 );
 
-const bodyRecoverMid =
-  "A prepositioned crew will be at the projected launch sight trained in normal \
-    and emergency splash down scenarios. The mission team will establish a \
-    safety zone around the landing sight to protect the boating public and \
-    aircraft. Immediately after splashdown, two fast boats with personnel deploy \
-    from the main recovery ship. One of these boats checks for capsule integrity \
-    and tests the area around the ship for dangerous vapors. Then this boat \
-    prepares the spaceship for the main recovery ship.";
+const bodyRecoverMid = (
+  <>
+    A prepositioned crew will be at the projected launch sight trained in normal
+    and emergency splash down scenarios. The mission team will establish a
+    safety zone around the landing sight to protect the boating public and
+    aircraft. Immediately after splashdown, two fast boats with personnel deploy
+    from the main recovery ship. One of these boats checks for capsule integrity
+    and tests the area around the ship for dangerous vapors. Then this boat
+    prepares the spaceship for the main recovery ship.
+  </>
+);
+
+const bodyRecoverLast = (
+  <>
+    The second fast boat is responsible for recovering the capsule’s parachutes
+    which were earlier deployed from the capsule. Once the main recovery vessel
+    is in position, it hoists the capsule on deck for the hatch to be opened.
+    Medical professionals will be present to assist the crew if needed.
+  </>
+);
+
 const ocean = (
   <img
     className="mt-mx-auto mt-10 md:w-[32rem] md:h-[21rem] w-[32rem] h-[18rem]"
@@ -84,10 +97,14 @@ const Services = () => {
             body={bodyRecoverFirst}
             images={[ocean]}
             reverseAlign={true}
+            multiHero={true}
           />
         </div>
-        <div>
-          <HeroText body={bodyRecoverMid} images={[ocean2]} heroEnd={true} />
+        <div className="grid card rounded-box">
+          <HeroText body={bodyRecoverMid} images={[ocean2]} multiHero={true} />
+        </div>
+        <div className="grid card rounded-box">
+          <HeroText body={bodyRecoverLast} images={[ocean2]} reverseAlign={true} multiHero={true} />
         </div>
         {/* <div className="divider"></div>
         <div className="grid card rounded-box">
