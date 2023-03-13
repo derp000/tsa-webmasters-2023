@@ -2,12 +2,13 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
-import { LandingPage, AboutUs, Services, Pricing, Legal } from "../components";
+import { LandingPage, AboutUs, Pricing, Legal } from "../components";
 import Footer from "../components/Footer";
 import TestingGlobe from "../components/TestingGlobe";
 import TestResize from "../components/TestResize";
 import NavbarTest from "../components/NavbarTest";
 import Eligibility from "../components/Eligibility";
+import Logistics from "../components/Logistics";
 
 const categories = [
   { name: "About", to: "AboutUs" },
@@ -27,7 +28,7 @@ const Home = () => {
           element={<LandingPage />}
         />
         <Route path="/AboutUs" element={<AboutUs />} />
-        <Route path="/Services" element={<Services />} />
+        <Route path="/Services" element={<Logistics />} />
         <Route path="/Pricing" element={<Pricing />} />
         <Route path="/Legal" element={<Legal />} />
         <Route path="/Testing" element={<TestingGlobe />} />

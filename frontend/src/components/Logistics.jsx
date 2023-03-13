@@ -107,7 +107,7 @@ const otv = (
 );
 
 // rename as logistics, keep vehicles here but move products to about
-const Services = () => {
+const Logistics = () => {
   return (
     <div>
       <HeroImage
@@ -202,4 +202,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Logistics;
