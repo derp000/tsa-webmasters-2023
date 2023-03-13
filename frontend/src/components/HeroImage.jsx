@@ -11,12 +11,12 @@ const HeroImage = ({ callToAction, imgSrc }) => {
       <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content text-center text-neutral-content px-10">
         <div className="max-w-screen">
-          <h1 className="mb-5 mt-10 xl:text-8xl text-3xl font-bold">
+          <h1 className="mb-5 mt-10 xl:text-7xl text-3xl font-bold">
             {callToAction}
           </h1>
-          <button className="btn btn-primary mb-10 text-xs lg:text-sm">
+          {/* <button className="btn btn-primary mb-10 text-xs lg:text-sm">
             Get Started
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

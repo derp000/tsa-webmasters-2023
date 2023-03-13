@@ -37,9 +37,10 @@ const bodySite = `
   accelerator, physical and mental testing rooms, and offices.
 `;
 // 3:2 image
+// was sm:48rem
 const huntsville = (
   <img
-    className="mt-10 mx-auto sm:h-[48rem] h-96 w-[32rem] max-h-fit"
+    className="mt-10 mx-auto sm:h-[46rem] h-96 w-[32rem]"
     src="src/assets/HuntsvilleRocket.jpg"
     alt="Rockets on display in Huntsville"
     key="huntsville"
@@ -150,6 +151,10 @@ const AboutUs = () => {
           />
         </div>
         {/* move to another link/component */}
+        <div className="divider"></div>
+        <div>
+          <HeroCenter body={"What we offer"} />
+        </div>
         <div className="divider"></div>
         <div>
           <HeroText
