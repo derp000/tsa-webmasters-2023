@@ -4,7 +4,8 @@ import { Route, Routes } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { LandingPage, AboutUs, Pricing, Legal } from "../components";
 import Footer from "../components/Footer";
-import TestingGlobe from "../components/TestingGlobe";
+import MarsGlobe from "../components/MarsGlobe";
+import MarsGlobeArc from "../components/MarsGlobeArc"
 import TestResize from "../components/TestResize";
 import NavbarTest from "../components/NavbarTest";
 import Eligibility from "../components/Eligibility";
@@ -31,11 +32,10 @@ const Home = () => {
         <Route path="/Services" element={<Logistics />} />
         <Route path="/Pricing" element={<Pricing />} />
         <Route path="/Legal" element={<Legal />} />
-        <Route path="/Testing" element={<TestingGlobe />} />
+        <Route path="/Testing4" element={<MarsGlobeArc />} />
         <Route path="/Testing2" element={<TestResize />} />
         <Route path="/Testing3" element={<NavbarTest />} />
         <Route path="/Eligibility" element={<Eligibility />} />
-
         {/* Outreach (promotion),  */}
       </Routes>
       <Footer />
