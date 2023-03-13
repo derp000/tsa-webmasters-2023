@@ -152,29 +152,12 @@ const AboutUs = () => {
         </div>
         {/* move to another link/component */}
         <div className="divider"></div>
+        {/* will lead to attractions link */}
         <div>
           <HeroCenter body={"What we offer"} />
         </div>
-        <div className="divider"></div>
-        <div>
-          <HeroText
-            heading={"Launch and Recovery"}
-            title={"Here's the whole rundown."}
-            body={bodyRundown}
-            images={[meteo]}
-            reverseAlign={true}
-          />
-        </div>
-        {/* <div className="grid card rounded-box">
-          <HeroCenter heading={"Our Mission Statement"} body={bodyMission} />
-        </div>
-        <div className="grid card rounded-box">
-          <HeroCenter body={"Join Us"} />
-        </div> */}
+        {/* have customer reviews here */}
       </div>
-      {/* <button className="btn btn-primary mb-10 text-xs lg:text-sm">
-        Enter
-      </button> */}
     </div>
   );
 };

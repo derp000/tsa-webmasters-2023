@@ -158,7 +158,7 @@ const Logistics = () => {
             images={[charon]}
           />
         </div>
-        <div className="divier"></div>
+        <div className="divider"></div>
         <div className="grid card rounded-box">
           <HeroText
             heading={"For those who want to experience Mars from afar"}

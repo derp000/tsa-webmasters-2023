@@ -3,7 +3,7 @@ import React from "react";
 const HeroImage = ({ callToAction, imgSrc }) => {
   return (
     <div
-      className="hero h-1/2"
+      className="hero"
       style={{
         backgroundImage: `url(${imgSrc})`,
       }}

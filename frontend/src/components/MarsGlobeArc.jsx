@@ -2,13 +2,14 @@ import { React, useRef, useEffect, useState } from "react";
 
 import Globe from "react-globe.gl";
 
-const MarsGlobeArc = ({ width, height }) => {
+const MarsGlobeArc = ({ width, height, startPos }) => {
   const globeEl = useRef();
 
   useEffect(() => {
     console.log(globeEl.current);
     globeEl.current.controls().autoRotate = true;
     globeEl.current.controls().autoRotateSpeed = 0.5;
+    globeEl.current.pointOfView(startPos);
   }, []);
 
   const N = 20;
@@ -43,7 +44,7 @@ const MarsGlobeArc = ({ width, height }) => {
         width={width}
         height={height}
         animateIn={true}
-        className="max-w-sm rounded-lg shadow-2xl"
+        // className="max-w-sm rounded-lg shadow-2xl"
       />
     </div>
   );
