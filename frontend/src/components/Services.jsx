@@ -1,4 +1,5 @@
 import React from "react";
+import HeroCenter from "./HeroCenter";
 
 import HeroImage from "./HeroImage";
 import HeroText from "./HeroText";
@@ -57,7 +58,7 @@ const bodyRecoverLast = (
 
 const ocean = (
   <img
-    className="mt-mx-auto mt-10 md:w-[32rem] md:h-[21rem] w-[32rem] h-[18rem]"
+    className="mt-10 mx-auto md:w-[32rem] md:h-[21rem] w-[32rem] h-[18rem]"
     src="src/assets/newfoundland_nasa.jfif"
     alt="VASIMR engine"
     key="vasimr"
@@ -66,13 +67,46 @@ const ocean = (
 
 const ocean2 = (
   <img
-    className="mt-mx-auto mt-2 md:w-[32rem] md:h-[21rem] w-[32rem] h-[18rem]"
+    className="mt-2 mx-auto md:w-[32rem] md:h-[21rem] w-[32rem] h-[18rem]"
     src="src/assets/newfoundland_nasa.jfif"
     alt="VASIMR engine"
     key="vasimr"
   />
 );
 
+const bodyCharon = (
+  <div className="leading-[4rem]">
+    The Charon is everything you've dreamed for. This reusable and sustainable
+    vehicle will get you to and from Mars. It carries 6 people and sports 33 RCS
+    thrusters, 6 hypergolic engines, and 9 LOX-CH4 engines providing 310 kN of
+    thurst each.
+  </div>
+);
+
+// ~ 2:1
+const charon = (
+  <img
+    className="mt-10 mx-auto sm:h-[26rem] h-96 w-[16rem]"
+    src="src/assets/charonRocket2.jpg"
+  />
+);
+
+const bodyOtv = (
+  <div className="leading-[4rem] lg:my-16">
+    Our Orbit Transition Vehicle can reach mars in just a month, 6 to 10 times
+    faster than the competition thanks to our cutting-edge VASIMR engine.
+  </div>
+);
+
+// ~ 3:4
+const otv = (
+  <img
+    className="mt-10 mx-auto md:w-[16rem] md:h-[24rem] w-[16rem] h-[24rem]"
+    src="src/assets/orbiter.jpg"
+  />
+);
+
+// rename as logistics, keep vehicles here but move products to about
 const Services = () => {
   return (
     <div>
@@ -104,7 +138,35 @@ const Services = () => {
           <HeroText body={bodyRecoverMid} images={[ocean2]} multiHero={true} />
         </div>
         <div className="grid card rounded-box">
-          <HeroText body={bodyRecoverLast} images={[ocean2]} reverseAlign={true} multiHero={true} />
+          <HeroText
+            body={bodyRecoverLast}
+            images={[ocean2]}
+            reverseAlign={true}
+            multiHero={true}
+          />
+        </div>
+        <div className="divider"></div>
+        <div className="grid card rounded-box">
+          <HeroCenter body={"Meet our Vehicles"} />
+        </div>
+        <div className="divider"></div>
+        <div className="grid card rounded-box">
+          <HeroText
+            heading={"Get ready for state-of-the-art mars exploration"}
+            title={"The Charon"}
+            body={bodyCharon}
+            images={[charon]}
+          />
+        </div>
+        <div className="divier"></div>
+        <div className="grid card rounded-box">
+          <HeroText
+            heading={"For those who want to experience Mars from afar"}
+            title={"The OTV"}
+            body={bodyOtv}
+            images={[otv]}
+            reverseAlign={true}
+          />
         </div>
         {/* <div className="divider"></div>
         <div className="grid card rounded-box">
