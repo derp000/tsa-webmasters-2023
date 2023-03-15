@@ -1,7 +1,9 @@
 import React from "react";
 import HeroCenter from "./HeroCenter";
 import HeroImage from "./HeroImage";
+import HeroReview from "./HeroReview";
 import HeroText from "./HeroText";
+import ReviewCard from "./ReviewCard";
 
 const cta = "We're gonna get YOU to space.";
 
@@ -109,6 +111,8 @@ const bodyRundown = (
   </>
 );
 
+const reviews = [<ReviewCard key="r1"/>, <ReviewCard key="r2"/>, <ReviewCard key="r3"/>];
+
 // TODO: mission statement
 // TODO: contact info footer
 // TODO: have logistics link to put launch/recovery and vehicles
@@ -155,6 +159,11 @@ const AboutUs = () => {
         {/* will lead to attractions link */}
         <div>
           <HeroCenter body={"What we offer"} />
+        </div>
+        <div className="divider"></div>
+        <div className="grid card rounded-box">
+          <HeroCenter body={"Testimonials"}/>
+          <HeroReview reviews={reviews} />
         </div>
         {/* have customer reviews here */}
       </div>
