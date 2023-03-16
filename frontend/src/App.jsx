@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 
 import Home from "./containers/Home";
 import Navbar from "./components/Navbar";
+import AttractionInteractive from "./components/AttractionInteractive";
+import Attractions from "./containers/Attractions";
 
 const categories = [
   { name: "About" },

@@ -5,15 +5,15 @@ const Footer = () => {
   return (
     <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
       <div className="grid grid-flow-col gap-4">
-        <a className="link link-hover">Info</a>
-        <a className="link link-hover">
+        <div className="link link-hover">Info</div>
+        <div className="link link-hover">
           <NavLink to="/Attractions">Attractions</NavLink>
-        </a>
-        <a className="link link-hover">Safety & Logistics</a>
-        <a className="link link-hover">Pricing</a>
-        <a className="link link-hover">
+        </div>
+        <div className="link link-hover">Safety & Logistics</div>
+        <div className="link link-hover">Pricing</div>
+        <div className="link link-hover">
           <NavLink to="/About">About</NavLink>
-        </a>
+        </div>
       </div>
       <div>
         {/* social media */}

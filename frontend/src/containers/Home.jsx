@@ -8,8 +8,11 @@ import ReviewCard from "../components/ReviewCard";
 import NavbarTest from "../components/NavbarTest";
 import Eligibility from "../components/Eligibility";
 import Logistics from "../components/Logistics";
-import Attractions from "../components/Attractions";
+import Attractions from "../components/AttractionsContainer";
 import GlobeArcPoints from "../components/GlobeArcPoints";
+import MarsGlobe from "../components/MarsGlobe";
+import AttractionsContainer from "../components/AttractionsContainer";
+import AttractionInteractive from "../components/AttractionInteractive";
 
 const categories = [
   { name: "About", to: "AboutUs" },
@@ -18,6 +21,8 @@ const categories = [
   { name: "Pricing", to: "Pricing" },
   { name: "Legal", to: "Legal" },
 ];
+
+const attractions = ["Mars", "Moon"];
 
 const Home = () => {
   return (
@@ -30,13 +35,20 @@ const Home = () => {
           element={<LandingPage />}
         />
         <Route path="/AboutUs" element={<AboutUs />} />
-        <Route path="/Offerings" element={<Attractions />} />
+        <Route path="/Attractions" element={<AttractionsContainer />} />
+        {attractions.map((a) => (
+          <Route
+            path={`/Attractions/${a}`}
+            element={<AttractionInteractive name={a} />}
+            key={a}
+          />
+        ))}
         <Route path="/Safety" element={<Logistics />} />
         <Route path="/Pricing" element={<Pricing />} />
 
         <Route path="/Legal" element={<Legal />} />
         <Route path="/Testing4" element={<GlobeArcPoints />} />
-        <Route path="/Testing2" element={<ReviewCard />} />
+        <Route path="/Testing2" element={<MarsGlobe />} />
         <Route path="/Testing3" element={<NavbarTest />} />
         <Route path="/Eligibility" element={<Eligibility />} />
         {/* Outreach (promotion),  */}
