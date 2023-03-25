@@ -5,6 +5,7 @@ const AttractionInteractive = ({ title, body, interactive }) => {
   const divSizeRef = useRef(null);
 
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+  const [text, setText] = useState("");
 
   // slightly jank fix
   useLayoutEffect(() => {
@@ -25,6 +26,10 @@ const AttractionInteractive = ({ title, body, interactive }) => {
     return () => clearInterval(reload);
   }, [divSizeRef.current]);
 
+  function handleClick() {
+    setText("hi");
+  }
+
   return (
     <>
       <div className="drawer drawer-mobile">
@@ -42,12 +47,13 @@ const AttractionInteractive = ({ title, body, interactive }) => {
           <GlobeArcPoints
             width={dimensions["width"]}
             height={dimensions["height"]}
+            handleClick={() => handleClick()}
             className="inline"
           />
         </div>
         <div className="drawer-side">
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-          <div className="menu p-4 w-80 bg-orange-200 text-black">Words</div>
+          <div className="menu p-4 w-80 bg-orange-200 text-black">{text}</div>
         </div>
       </div>
     </>
