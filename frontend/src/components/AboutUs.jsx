@@ -111,7 +111,11 @@ const bodyRundown = (
   </>
 );
 
-const reviews = [<ReviewCard key="r1"/>, <ReviewCard key="r2"/>, <ReviewCard key="r3"/>];
+const reviews = [
+  <ReviewCard key="r1" />,
+  <ReviewCard key="r2" />,
+  <ReviewCard key="r3" />,
+];
 
 // TODO: mission statement
 // TODO: contact info footer
@@ -162,7 +166,7 @@ const AboutUs = () => {
         </div>
         <div className="divider"></div>
         <div className="grid card rounded-box">
-          <HeroCenter body={"Testimonials"}/>
+          <HeroCenter body={"Testimonials"} />
           <HeroReview reviews={reviews} />
         </div>
         {/* have customer reviews here */}

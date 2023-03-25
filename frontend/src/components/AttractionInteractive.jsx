@@ -1,30 +1,34 @@
-import React, { useEffect, useRef, useState } from "react";
-import MarsGlobeArc from "./MarsGlobeArc";
+import React, { useLayoutEffect, useRef, useState } from "react";
+import GlobeArcPoints from "./GlobeArcPoints";
 
 const AttractionInteractive = ({ title, body, interactive }) => {
   const divSizeRef = useRef(null);
 
-  // doesnt work just ignore
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
-  useEffect(() => {
-    console.log(
-      `width ${
-        divSizeRef.current ? divSizeRef.current.offsetWidth : 0
-      } length ${divSizeRef.current ? divSizeRef.current.offsetHeight : 0}`
-    );
-    if (divSizeRef.current) {
-      setDimensions({
-        width: divSizeRef.current.offsetWidth,
-        height: divSizeRef.current.offsetHeight,
-      });
-    }
+  // slightly jank fix
+  useLayoutEffect(() => {
+    const reload = setInterval(() => {
+      console.log(
+        `width ${
+          divSizeRef.current ? divSizeRef.current.offsetWidth : 0
+        } length ${divSizeRef.current ? divSizeRef.current.offsetHeight : 0}`
+      );
+      if (divSizeRef.current) {
+        setDimensions({
+          width: divSizeRef.current.offsetWidth,
+          height: divSizeRef.current.offsetHeight,
+        });
+      }
+    }, 1000);
+
+    return () => clearInterval(reload);
   }, [divSizeRef.current]);
 
   return (
     <>
       <div className="drawer drawer-mobile">
-        <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+        <input type="checkbox" className="drawer-toggle" />
         <div
           ref={divSizeRef}
           className="drawer-content flex flex-col items-center justify-center"
@@ -35,7 +39,7 @@ const AttractionInteractive = ({ title, body, interactive }) => {
         >
           Open drawer
         </label> */}
-          <MarsGlobeArc
+          <GlobeArcPoints
             width={dimensions["width"]}
             height={dimensions["height"]}
             className="inline"
