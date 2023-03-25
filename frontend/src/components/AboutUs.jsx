@@ -89,7 +89,7 @@ const bodyRundown = (
       <p className="italic inline">the</p> hub for NASA rocket launches.
     </p>
     <p>
-      The rocket’s crew capsule will separate from the rest of the rocket during
+      The rocket's crew capsule will separate from the rest of the rocket during
       reentry. The rest of the rocket will return to Kennedy Space Center and
       redock itself on a platform for reusability. The crew capsule will land in
       a predetermined location near Newfoundland in the Atlantic Ocean. The
@@ -103,7 +103,7 @@ const bodyRundown = (
       the main recovery ship. One of these boats checks for capsule integrity
       and tests the area around the ship for dangerous vapors. Then this boat
       prepares the spaceship for the main recovery ship. The second fast boat is
-      responsible for recovering the capsule’s parachutes which were earlier
+      responsible for recovering the capsule's parachutes which were earlier
       deployed from the capsule. Once the main recovery vessel is in position,
       it hoists the capsule on deck for the hatch to be opened. Medical
       professionals will be present to assist the crew if needed.
