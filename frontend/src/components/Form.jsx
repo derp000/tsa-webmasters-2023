@@ -6,7 +6,13 @@ const Form = ({ formContent }) => {
     <div className="hero">
       <div className="form-control w-full max-w-lg">
         {formContent.map((label) => (
-          <Label prompt={label.prompt} extra={label.extra} key={label.key} />
+          <Label
+            prompt={label.prompt}
+            extra={label.extra}
+            key={label.key}
+            handleKeyPress={label.handleChange}
+            // warning={label.handleKeyPress}
+          />
         ))}
         {/* <Label prompt={"Enter your name"} />
         <Label prompt={"Enter your email"} />

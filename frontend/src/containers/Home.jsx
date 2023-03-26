@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 import { LandingPage, AboutUs, Pricing, Legal } from "../components";
 import Footer from "../components/Footer";
 import NavbarTest from "../components/NavbarTest";
-import Eligibility from "../components/Eligibility";
+import Signup from "../components/Signup";
 import Logistics from "../components/Logistics";
 import GlobeArcPoints from "../components/GlobeArcPoints";
 import MarsGlobe from "../components/MarsGlobe";
@@ -19,7 +19,8 @@ const categories = [
   { name: "Attractions", to: "Attractions" },
   { name: "Safety/Logistics", to: "Safety" },
   { name: "Pricing", to: "Pricing" },
-  { name: "Legal", to: "Legal" },
+  // { name: "Legal", to: "Legal" },
+  { name: "Join", to: "Signup" },
 ];
 
 const attractions = ["Mars", "Moon"];
@@ -59,7 +60,7 @@ const Home = () => {
         <Route path="/Testing4" element={<GlobeArcPoints />} />
         <Route path="/Testing2" element={<MarsGlobe />} />
         <Route path="/Testing3" element={<NavbarTest />} />
-        <Route path="/Eligibility" element={<Eligibility />} />
+        <Route path="/Signup" element={<Signup />} />
         {/* Outreach (promotion),  */}
       </Routes>
       <Footer />

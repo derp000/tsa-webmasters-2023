@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const AttractionCard = ({ title, imgSrc, to, onContentClick }) => {
-  const content = (
+  let content = (
     <>
       <img
         className="object-contain h-auto w-full z-10 opacity-50"

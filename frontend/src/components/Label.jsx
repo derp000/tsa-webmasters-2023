@@ -1,6 +1,6 @@
 import React from "react";
 
-const Label = ({ prompt, extra }) => {
+const Label = ({ prompt, extra, handleChange }) => {
   return (
     <>
       <label className="label">
@@ -10,6 +10,7 @@ const Label = ({ prompt, extra }) => {
         type="text"
         placeholder="Type here"
         className="input input-bordered input-lg w-full max-w-lg"
+        onChange={handleChange}
       />
       <label className="label">
         <span className="label-text-alt"></span>
