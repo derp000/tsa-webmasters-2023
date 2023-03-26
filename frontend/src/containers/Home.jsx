@@ -43,7 +43,7 @@ const Home = () => {
               <AttractionInteractive
                 title={"Martian Sightseeing"}
                 body={
-                  "Visit some of the most awe-inspiring landscapes Mars has to offer."
+                  "Visit some of the most awe-inspiring landscapes Mars has to offer. Click on a marker to learn more."
                 }
               />
             }
