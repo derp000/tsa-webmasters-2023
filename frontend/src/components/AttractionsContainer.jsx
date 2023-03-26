@@ -1,10 +1,7 @@
-import { GlobeAsiaAustraliaIcon } from "@heroicons/react/20/solid";
 import React from "react";
-import { Route, Routes } from "react-router-dom";
 import AttractionCard from "./AttractionCard";
 import CardContainer from "./CardContainer";
 import HeroImage from "./HeroImage";
-import MarsGlobe from "./MarsGlobe";
 
 const cards = [];
 for (let i = 0; i < 6; i++) {
