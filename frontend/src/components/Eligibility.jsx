@@ -1,6 +1,9 @@
-import React from "react";
+import { React, useState } from "react";
+import { Link } from "react-router-dom";
 import Checklist from "./Checklist";
 import HeroImage from "./HeroImage";
+import StepsNav from "./StepsNav";
+import Form from "./Form";
 
 const criteria = [
   <p>
@@ -13,13 +16,8 @@ const criteria = [
     personality exam) and personal interviews
   </p>,
   <p>
-    Physical exam (distal and near eyesight correctable to
-    20/20 in each eye, blood pressure not exeeding 140/90 when sitting) and a
-    medical screening  </p>,
-  // might get rid of this one
-  <p>
-    A doctorate degree from an accredited university or equivalent experience in
-    natural sciences, medicine, or engineering<sup>*</sup>
+    Physical exam (distal and near eyesight correctable to 20/20 in each eye,
+    blood pressure not exeeding 140/90 when sitting) and a medical screening{" "}
   </p>,
   <p>
     Teaching K-12 is considered equivalent for an astronaut candidate; educators
@@ -27,20 +25,67 @@ const criteria = [
   </p>,
 ];
 
-const disclaimer = (
-  <p className="text-left py-6 lg:text-sm text-md md:max-w-5xl lg:leading-loose leading-loose text italic">
-    <sup>*</sup>Suggested; Does not include psychology, nursing, social
-    sciences, technology, or aviation technology. For further information about
-    qualifying degrees contact us in the contact information page.
-  </p>
-);
-
 const Eligibility = () => {
-  return (
+  const [step, setStep] = useState(1);
+
+  let renderedTitle = "Ready for an out-of-this-world experience?";
+  let renderedStep = (
     <>
-      <HeroImage callToAction={"Ready for an out-of-this-world experience?"} />
-      <Checklist criteria={criteria} disclaimer={disclaimer} />
+      <Checklist criteria={criteria} className="w-full content-center" />
+      <div className="hero p-4">
+        <div className="btn btn-primary" onClick={() => setStep(step + 1)}>
+          Next
+        </div>
+      </div>
     </>
+  );
+  switch (step) {
+    case 1:
+      renderedTitle = "Ready for an out-of-this-world experience?";
+      renderedStep = (
+        <>
+          <Checklist criteria={criteria} className="w-full content-center" />
+          <div className="hero p-4">
+            <div className="btn btn-primary" onClick={() => setStep(step + 1)}>
+              Next
+            </div>
+          </div>
+        </>
+      );
+      break;
+    // fill out form
+    case 2:
+      renderedTitle = "Fill out necessary details."
+      break;
+    // choose product
+    case 3:
+      renderedTitle = "Choose your once-in-a-lifetime trip!"
+      break;
+    default:
+      renderedTitle = "Ready for an out-of-this-world experience?";
+      renderedStep = (
+        <>
+          <Checklist criteria={criteria} className="w-full content-center" />
+          <div className="hero p-4">
+            <div className="btn btn-primary" onClick={() => setStep(step + 1)}>
+              Next
+            </div>
+          </div>
+        </>
+      );
+      break;
+  }
+
+  return (
+    <div>
+      <HeroImage callToAction={renderedTitle} />
+      <div className="hero p-4">
+        <StepsNav currentStep={step} />
+      </div>
+      {/* {renderedStep} */}
+      <Form />
+      {step}
+    </div>
   );
 };
 
