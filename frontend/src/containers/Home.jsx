@@ -39,7 +39,14 @@ const Home = () => {
         {attractions.map((a) => (
           <Route
             path={`/Attractions/${a}`}
-            element={<AttractionInteractive name={a} />}
+            element={
+              <AttractionInteractive
+                title={"Martian Sightseeing"}
+                body={
+                  "Visit some of the most awe-inspiring landscapes Mars has to offer."
+                }
+              />
+            }
             key={a}
           />
         ))}
