@@ -2,56 +2,10 @@ import { React, useRef, useEffect, useState } from "react";
 
 import Globe from "react-globe.gl";
 
-// const canyon = { lat: -13.9, lng: -59.2, name: "", body: "", imgUrl: "" };
-// const fossae = { lat: -3.2, lng: -163 };
-// const mons = { lat: 18.65, lng: 226.2 };
-// // const crater = { lat: -5.4, lng: 137.8 };
-// const mount = { lat: -5.08, lng: 137.85 };
-
-// const arcsData = [
-//   {
-//     startLat: canyon["lat"],
-//     startLng: canyon["lng"],
-//     endLat: mons["lat"],
-//     endLng: mons["lng"],
-//   },
-//   {
-//     startLat: mons["lat"],
-//     startLng: mons["lng"],
-//     endLat: mount["lat"],
-//     endLng: mount["lng"],
-//   },
-//   {
-//     startLat: mount["lat"],
-//     startLng: mount["lng"],
-//     endLat: fossae["lat"],
-//     endLng: fossae["lng"],
-//   },
-//   {
-//     startLat: fossae["lat"],
-//     startLng: fossae["lng"],
-//     endLat: canyon["lat"],
-//     endLng: canyon["lng"],
-//   },
-// ];
-// console.log(arcsData);
-
 const markerSvg = `<svg viewBox="-4 0 36 36">
     <path fill="currentColor" d="M14,0 C21.732,0 28,5.641 28,12.6 C28,23.963 14,36 14,36 C14,36 0,24.064 0,12.6 C0,5.641 6.268,0 14,0 Z"></path>
     <circle fill="black" cx="14" cy="14" r="7"></circle>
   </svg>`;
-
-// const N = 30;
-// const gData = [...Array(N).keys()].map(() => ({
-//   lat: (Math.random() - 0.5) * 180,
-//   lng: (Math.random() - 0.5) * 360,
-//   size: 7 + Math.random() * 30,
-//   color: ["red", "white", "blue", "green"][Math.round(Math.random() * 3)],
-// }));
-
-// const gData = [canyon, fossae, mons, mount];
-
-// console.log(gData);
 
 const GlobeArcPoints = ({
   width,
@@ -59,7 +13,7 @@ const GlobeArcPoints = ({
   startPos,
   arcsData,
   gData,
-  manageClick
+  manageClick,
   // handleClick,
 }) => {
   const globeEl = useRef();
@@ -73,10 +27,10 @@ const GlobeArcPoints = ({
 
   // jank way to work around react-globe.gl htmlElement wonkiness
   function handleClick(location) {
-    console.log("=================name")
-    console.log(location)
-    manageClick(location)
-    console.log("sent to manageclick")
+    console.log("=================name");
+    console.log(location);
+    manageClick(location);
+    console.log("sent to manageclick");
   }
 
   return (
@@ -93,31 +47,18 @@ const GlobeArcPoints = ({
         atmosphereAltitude={0.25}
         htmlElementsData={gData}
         htmlElement={(location) => {
-          // const el = (
-          //   <div
-          //     onClick={handleClick}
-          //     className="bg-blue-200 w-[20px] pointer-events-auto cursor-pointer"
-          //   >
-          //     {markerSvg}
-          //   </div>
-          // );
-          // return el;
           const el = document.createElement("div");
           el.innerHTML = markerSvg;
           el.style.color = "lightblue";
           el.style.width = `20px`;
           el.style["pointer-events"] = "auto";
           el.style.cursor = "pointer";
-          // console.log(location);
-          // console.log("========")
-          // console.log(gData.map((d) => d.__threeObj).filter((d) => d));
           el.onclick = () => handleClick(location);
           return el;
         }}
         width={width}
         height={height}
         animateIn={true}
-        // className="max-w-sm rounded-lg shadow-2xl"
       />
     </div>
   );

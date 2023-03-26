@@ -4,15 +4,15 @@ import { Route, Routes } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { LandingPage, AboutUs, Pricing, Legal } from "../components";
 import Footer from "../components/Footer";
-import ReviewCard from "../components/ReviewCard";
 import NavbarTest from "../components/NavbarTest";
 import Eligibility from "../components/Eligibility";
 import Logistics from "../components/Logistics";
-import Attractions from "../components/AttractionsContainer";
 import GlobeArcPoints from "../components/GlobeArcPoints";
 import MarsGlobe from "../components/MarsGlobe";
 import AttractionsContainer from "../components/AttractionsContainer";
 import AttractionInteractive from "../components/AttractionInteractive";
+
+import * as mars from "./mars";
 
 const categories = [
   { name: "About", to: "AboutUs" },
@@ -45,6 +45,8 @@ const Home = () => {
                 body={
                   "Visit some of the most awe-inspiring landscapes Mars has to offer. Click on a marker to learn more."
                 }
+                arcsData={mars.arcsData}
+                gData={mars.gData}
               />
             }
             key={a}
