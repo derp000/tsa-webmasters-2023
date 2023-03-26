@@ -1,21 +1,21 @@
 import React from "react";
+import Label from "./Label";
 
-const Form = () => {
+const Form = ({ formContent }) => {
   return (
     <div className="hero">
       <div className="form-control w-full max-w-lg">
-        <label className="label">
-          <span className="label-text">What is your name?</span>
-        </label>
-        <input
-          type="text"
-          placeholder="Type here"
-          className="input input-bordered input-lg w-full max-w-lg"
-        />
-        <label className="label">
-          <span className="label-text-alt"></span>
-          <span className="label-text-alt">Bottom Right label</span>
-        </label>
+        {formContent.map((label) => (
+          <Label prompt={label.prompt} extra={label.extra} key={label.key} />
+        ))}
+        {/* <Label prompt={"Enter your name"} />
+        <Label prompt={"Enter your email"} />
+        <Label
+          prompt={"Enter your phone number"}
+          extra={
+            "If you're outside the US/Canada, please include your country's calling code!"
+          }
+        /> */}
       </div>
     </div>
   );

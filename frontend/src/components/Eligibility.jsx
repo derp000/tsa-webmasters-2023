@@ -4,6 +4,8 @@ import Checklist from "./Checklist";
 import HeroImage from "./HeroImage";
 import StepsNav from "./StepsNav";
 import Form from "./Form";
+import AttractionCard from "./AttractionCard";
+import CardContainer from "./CardContainer";
 
 const criteria = [
   <p>
@@ -25,8 +27,29 @@ const criteria = [
   </p>,
 ];
 
+const formContent = [
+  { prompt: "Enter your name", extra: "", key: "name" },
+  { prompt: "Enter your email", extra: "", key: "email" },
+  {
+    prompt: "Enter your phone number",
+    extra: "",
+    key: "If you're outside the US/Canada, please include your country's calling code!",
+  },
+];
+
 const Eligibility = () => {
   const [step, setStep] = useState(1);
+
+  const cards = [];
+  for (let i = 0; i < 6; i++) {
+    cards.push(
+      <AttractionCard
+        title={"Title Here"}
+        imgSrc={"src/assets/HuntsvilleRocket.jfif"}
+        onContentClick={() => setStep(step + 1)}
+      />
+    );
+  }
 
   let renderedTitle = "Ready for an out-of-this-world experience?";
   let renderedStep = (
@@ -55,11 +78,47 @@ const Eligibility = () => {
       break;
     // fill out form
     case 2:
-      renderedTitle = "Fill out necessary details."
+      renderedTitle = "Fill out necessary details.";
+      renderedStep = (
+        <>
+          <Form formContent={formContent} />
+          <div className="hero p-4">
+            <div className="grid grid-cols-2 gap-5">
+              <div
+                className="btn btn-primary"
+                onClick={() => setStep(step - 1)}
+              >
+                Previous
+              </div>
+              <div
+                className="btn btn-primary"
+                onClick={() => setStep(step + 1)}
+              >
+                Next
+              </div>
+            </div>
+          </div>
+          ;
+        </>
+      );
       break;
     // choose product
     case 3:
-      renderedTitle = "Choose your once-in-a-lifetime trip!"
+      renderedTitle = "Choose your once-in-a-lifetime trip!";
+      renderedStep = (
+        <>
+          <div className="flex flex-col w-full border-opacity-50">
+            <div className="grid card rounded-box">
+              <CardContainer cards={cards} />
+            </div>
+          </div>
+          <div className="hero p-4">
+            <div className="btn btn-primary" onClick={() => setStep(step - 1)}>
+              Previous
+            </div>
+          </div>
+        </>
+      );
       break;
     default:
       renderedTitle = "Ready for an out-of-this-world experience?";
@@ -79,11 +138,10 @@ const Eligibility = () => {
   return (
     <div>
       <HeroImage callToAction={renderedTitle} />
-      <div className="hero p-4">
+      <div className="hero py-5">
         <StepsNav currentStep={step} />
       </div>
-      {/* {renderedStep} */}
-      <Form />
+      {renderedStep}
       {step}
     </div>
   );
