@@ -1,11 +1,15 @@
-import { React, useState } from "react";
-import { Link } from "react-router-dom";
+import { React, useState, useEffect } from "react";
+import Confetti from "react-confetti";
+
+import Alert from "./Alert";
 import Checklist from "./Checklist";
 import HeroImage from "./HeroImage";
 import StepsNav from "./StepsNav";
 import Form from "./Form";
 import AttractionCard from "./AttractionCard";
 import CardContainer from "./CardContainer";
+
+import useWindowDimensions from "./viewport";
 
 const criteria = [
   <p>
@@ -27,18 +31,46 @@ const criteria = [
   </p>,
 ];
 
-const formContent = [
-  { prompt: "Enter your name", extra: "", key: "name" },
-  { prompt: "Enter your email", extra: "", key: "email" },
-  {
-    prompt: "Enter your phone number",
-    extra: "",
-    key: "If you're outside the US/Canada, please include your country's calling code!",
-  },
-];
-
-const Eligibility = () => {
+const Signup = () => {
+  const { width, height } = useWindowDimensions();
   const [step, setStep] = useState(1);
+  const [numParticles, setNumParticles] = useState(200);
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [showError, setShowError] = useState(false);
+
+  const formContent = [
+    {
+      prompt: "Enter your name",
+      extra: "",
+      key: "name",
+      handleKeyPress: () => {},
+    },
+    {
+      prompt: "Enter your email",
+      extra: "",
+      key: "email",
+      handleChange: () => setEmail((e) => e.target.value),
+    },
+    {
+      prompt: "Enter your phone number",
+      extra: "",
+      key: "If you're outside the US/Canada, please include your country's calling code!",
+      handleChange: () => setPhone((e) => e.target.value),
+    },
+  ];
+
+  useEffect(() => {
+    function onTimeout() {
+      setNumParticles(0);
+    }
+
+    const timeoutId = setTimeout(onTimeout, 5000);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, []);
 
   const cards = [];
   for (let i = 0; i < 6; i++) {
@@ -82,6 +114,11 @@ const Eligibility = () => {
       renderedStep = (
         <>
           <Form formContent={formContent} />
+          {showError && (
+            <Alert
+              error={"Invalid email or phone number!"}
+            />
+          )}
           <div className="hero p-4">
             <div className="grid grid-cols-2 gap-5">
               <div
@@ -92,7 +129,16 @@ const Eligibility = () => {
               </div>
               <div
                 className="btn btn-primary"
-                onClick={() => setStep(step + 1)}
+                onClick={() => {
+                  if (
+                    !/.+@.+\.[A-Za-z]+$/.test(email) &&
+                    !/[0-9]/.test(phone)
+                  ) {
+                    setShowError(true);
+                    return;
+                  }
+                  setStep(step + 1);
+                }}
               >
                 Next
               </div>
@@ -115,6 +161,30 @@ const Eligibility = () => {
           <div className="hero p-4">
             <div className="btn btn-primary" onClick={() => setStep(step - 1)}>
               Previous
+            </div>
+          </div>
+        </>
+      );
+      break;
+    case 4:
+      renderedTitle = "Thanks for choosing Helios!";
+      renderedStep = (
+        <>
+          <Confetti
+            width={width}
+            height={height}
+            numberOfPieces={numParticles}
+          />
+          <div className="hero h-fit px-2">
+            <div className="max-w-5xl text-center">
+              <h1 className="md:text-7xl text-5xl font-bold mt-2">
+                You're in good hands.
+              </h1>
+              <div className="lg:text-2xl text-2xl max-w-3xl lg:leading-loose leading-loose py-6">
+                You'll be guided by professionally trained tour guides with
+                years of aeronautical and astronautical experience. We'll make
+                sure you're trip is the best it can be, or your money back!
+              </div>
             </div>
           </div>
         </>
@@ -147,4 +217,4 @@ const Eligibility = () => {
   );
 };
 
-export default Eligibility;
+export default Signup;
