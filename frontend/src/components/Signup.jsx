@@ -1,4 +1,5 @@
 import { React, useState, useEffect } from "react";
+import { useForm, Controller } from "react-hook-form";
 import Confetti from "react-confetti";
 
 import Alert from "./Alert";
@@ -8,6 +9,7 @@ import StepsNav from "./StepsNav";
 import Form from "./Form";
 import AttractionCard from "./AttractionCard";
 import CardContainer from "./CardContainer";
+import Label from "./Label";
 
 import useWindowDimensions from "./viewport";
 
@@ -38,6 +40,9 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [showError, setShowError] = useState(false);
+
+  const { register, handleSubmit, setValue, control } = useForm();
+  const onSubmit = (data) => console.log(data);
 
   const formContent = [
     {
@@ -113,38 +118,25 @@ const Signup = () => {
       renderedTitle = "Fill out necessary details.";
       renderedStep = (
         <>
-          <Form formContent={formContent} />
-          {showError && (
-            <Alert
-              error={"Invalid email or phone number!"}
-            />
-          )}
-          <div className="hero p-4">
-            <div className="grid grid-cols-2 gap-5">
-              <div
-                className="btn btn-primary"
-                onClick={() => setStep(step - 1)}
-              >
-                Previous
+          <div className="hero">
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <div className="form-control w-full max-w-lg">
+                <label className="label">
+                  <span className="label-text">Thing</span>
+                </label>
+                <input
+                  {...register("thing", { required: "Enter name" })}
+                  type="text"
+                  placeholder="Type here"
+                  className="input input-bordered input-lg w-full max-w-lg"
+                />
+                <label className="label">
+                  <span className="label-text-alt"></span>
+                  <span className="label-text-alt">extra</span>
+                </label>
               </div>
-              <div
-                className="btn btn-primary"
-                onClick={() => {
-                  if (
-                    !/.+@.+\.[A-Za-z]+$/.test(email) &&
-                    !/[0-9]/.test(phone)
-                  ) {
-                    setShowError(true);
-                    return;
-                  }
-                  setStep(step + 1);
-                }}
-              >
-                Next
-              </div>
-            </div>
+            </form>
           </div>
-          ;
         </>
       );
       break;

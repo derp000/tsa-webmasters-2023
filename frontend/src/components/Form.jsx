@@ -1,28 +1,25 @@
 import React from "react";
 import Label from "./Label";
 
-const Form = ({ formContent }) => {
+const Form = ({ formContent, register, handleSubmit }) => {
+  const onSubmit = (data) => console.log(data);
+
   return (
     <div className="hero">
-      <div className="form-control w-full max-w-lg">
-        {formContent.map((label) => (
-          <Label
-            prompt={label.prompt}
-            extra={label.extra}
-            key={label.key}
-            handleKeyPress={label.handleChange}
-            // warning={label.handleKeyPress}
-          />
-        ))}
-        {/* <Label prompt={"Enter your name"} />
-        <Label prompt={"Enter your email"} />
-        <Label
-          prompt={"Enter your phone number"}
-          extra={
-            "If you're outside the US/Canada, please include your country's calling code!"
-          }
-        /> */}
-      </div>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="form-control w-full max-w-lg">
+          {formContent.map((label) => (
+            <Label
+              prompt={label.prompt}
+              extra={label.extra}
+              key={label.key}
+              // handleKeyPress={label.handleChange}
+              register={register}
+              // warning={label.handleKeyPress}
+            />
+          ))}
+        </div>
+      </form>
     </div>
   );
 };
