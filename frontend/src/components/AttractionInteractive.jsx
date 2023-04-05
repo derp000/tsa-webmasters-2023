@@ -11,6 +11,7 @@ const AttractionInteractive = ({
   gData,
   startPos,
   globeImg,
+  arcColor,
   markerColor,
   drawerStyle,
 }) => {
@@ -72,6 +73,7 @@ const AttractionInteractive = ({
             startPos={startPos}
             manageClick={manageClick}
             globeImg={globeImg}
+            arcColor={arcColor}
             markerColor={markerColor}
             className="inline"
           />

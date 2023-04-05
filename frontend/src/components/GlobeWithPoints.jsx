@@ -14,6 +14,7 @@ const GlobeWithPoints = ({
   arcsData,
   gData,
   globeImg,
+  arcColor,
   markerColor,
   manageClick,
   // handleClick,
@@ -41,7 +42,7 @@ const GlobeWithPoints = ({
         ref={globeEl}
         globeImageUrl={globeImg}
         arcsData={arcsData}
-        // arcColor={"color"}
+        arcColor={() => arcColor}
         arcDashLength={() => 0.8}
         arcDashGap={() => 0.1}
         arcDashAnimateTime={() => 1500}

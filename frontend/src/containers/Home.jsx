@@ -47,6 +47,7 @@ const Home = () => {
                 "Learn about some of the most awe-inspiring landscapes Mars you'll visit. Click on a marker to learn more."
               }
               arcsData={mars.arcsData}
+              arcColor={"#c7c56f"}
               gData={mars.gData}
               globeImg={"/src/assets/mars_uv.jpg"}
               markerColor={"orange"}
@@ -65,6 +66,7 @@ const Home = () => {
               gData={moon.gData}
               globeImg={"/src/assets/moon_uv.jpg"}
               markerColor={"lightblue"}
+              arcColor={"#8206c4"}
               startPos={moon.GLOBE_START}
               drawerStyle={"bg-gradient-to-b from-gray-700 to-blue-400"}
             />
