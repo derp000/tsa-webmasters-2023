@@ -17,8 +17,8 @@ const Logistics = () => {
         callToAction={"This is how we do it."}
         imgSrc={"src/assets/HuntsvilleRocket.jfif"}
       />
-      <div className="flex flex-col w-full border-opacity-50 bg-gray-400">
-        <div className="divider before:bg-purple-900 after:bg-purple-900"></div>
+      <div className="flex flex-col w-full border-opacity-50 bg-gradient-to-r from-blue-400 to-fuchsia-400">
+        <div className="divider before:bg-purple-200 after:bg-purple-200"></div>
         <div className="grid card rounded-box">
           <HeroText
             heading={"Launch"}
@@ -28,7 +28,7 @@ const Logistics = () => {
             bgLink={bgLink}
           />
         </div>
-        <div className="divider before:bg-purple-900 after:bg-purple-900"></div>
+        <div className="divider before:bg-purple-200 after:bg-purple-200"></div>
         <div className="grid card rounded-box">
           <HeroText
             heading={"Recovery"}
@@ -57,14 +57,14 @@ const Logistics = () => {
             bgLink={bgLink}
           />
         </div>
-        <div className="divider before:bg-purple-900 after:bg-purple-900"></div>
+        <div className="divider before:bg-purple-200 after:bg-purple-200"></div>
         <div className="grid card rounded-box">
           <HeroCenter
             body={"Meet our Vehicles"}
             bgColor={"bg-gradient-to-r from-purple-500 to-indigo-500"}
           />
         </div>
-        <div className="divider before:bg-purple-900 after:bg-purple-900"></div>
+        <div className="divider before:bg-purple-200 after:bg-purple-200"></div>
         <div className="grid card rounded-box">
           <HeroText
             heading={"Get ready for state-of-the-art mars exploration"}
@@ -74,7 +74,7 @@ const Logistics = () => {
             bgLink={bgLink}
           />
         </div>
-        <div className="divider before:bg-purple-900 after:bg-purple-900"></div>
+        <div className="divider before:bg-purple-200 after:bg-purple-200"></div>
         <div className="grid card rounded-box">
           <HeroText
             heading={"For those who want to experience Mars from afar"}
@@ -85,8 +85,8 @@ const Logistics = () => {
             bgLink={bgLink}
           />
         </div>
-        <div className="divider before:bg-purple-900 after:bg-purple-900"></div>
-        {/* <div className="divider before:bg-purple-900 after:bg-purple-900"></div>
+        <div className="divider before:bg-purple-200 after:bg-purple-200"></div>
+        {/* <div className="divider before:bg-purple-200 after:bg-purple-200"></div>
         <div className="grid card rounded-box">
           <HeroText
             heading={"Training"}
@@ -96,7 +96,7 @@ const Logistics = () => {
           />
         </div>
         {/* move to another link/component */}
-        {/* <div className="divider before:bg-purple-900 after:bg-purple-900"></div>
+        {/* <div className="divider before:bg-purple-200 after:bg-purple-200"></div>
         <div>
           <HeroText
             heading={"Launch and Recovery"}

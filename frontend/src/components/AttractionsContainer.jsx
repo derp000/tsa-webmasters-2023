@@ -22,6 +22,22 @@ const cards = [
     to="/Attractions/Venus"
     key="venus"
   />,
+  <AttractionCard
+    title={"Mercury"}
+    imgSrc={"src/assets/mercury.jpg"}
+    to="/Attractions/Mercury"
+    key="mercury"
+  />,
+  <AttractionCard
+    title="Coming Soon"
+    imgSrc={"src/assets/constellation.jpg"}
+    key="soon_1"
+  />,
+  <AttractionCard
+    title="Coming Soon"
+    imgSrc={"src/assets/constellation.jpg"}
+    key="soon_2"
+  />,
 ];
 
 const AttractionsContainer = () => {
@@ -36,7 +52,7 @@ const AttractionsContainer = () => {
         className="flex flex-col w-full border-opacity-50 bg-cover"
         style={{ backgroundImage: `url(src/assets/constellation.jpg)` }}
       >
-        <div className="grid card rounded-box py-20">
+        <div className="grid card rounded-box">
           <CardContainer cards={cards} />
         </div>
       </div>

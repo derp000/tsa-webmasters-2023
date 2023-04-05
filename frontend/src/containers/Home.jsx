@@ -15,6 +15,7 @@ import AttractionInteractive from "../components/AttractionInteractive";
 import * as mars from "./mars";
 import * as moon from "./moon";
 import * as venus from "./venus";
+import * as mercury from "./mercury";
 
 const categories = [
   { name: "About", to: "AboutUs" },
@@ -67,7 +68,7 @@ const Home = () => {
               gData={moon.gData}
               globeImg={"/src/assets/moon_uv.jpg"}
               markerColor={"lightblue"}
-              arcColor={"#8206c4"}
+              arcColor={"white"}
               startPos={moon.GLOBE_START}
               drawerStyle={"bg-gradient-to-b from-gray-700 to-blue-400"}
             />
@@ -77,7 +78,7 @@ const Home = () => {
           path="/Attractions/Venus"
           element={
             <AttractionInteractive
-              title="Venus"
+              title="Venus Voyage"
               body="Visit this alien-like planet and observe it from the safety of your Orbit Transition Vehicle."
               arcsData={venus.arcsData}
               gData={venus.gData}
@@ -86,6 +87,23 @@ const Home = () => {
               arcColor={"white"}
               atmosphereColor={"red"}
               startPos={venus.GLOBE_START}
+              drawerStyle={"bg-gradient-to-b from-red-600 to-yellow-600"}
+            />
+          }
+        />
+        <Route
+          path="/Attractions/Mercury"
+          element={
+            <AttractionInteractive
+              title="Mercury"
+              body="Find out what this mysterious little planet has in store."
+              arcsData={mercury.arcsData}
+              gData={mercury.gData}
+              globeImg={"/src/assets/mercury_uv.jpg"}
+              markerColor={"lightblue"}
+              arcColor={"white"}
+              atmosphereColor={"orange"}
+              startPos={mercury.GLOBE_START}
               drawerStyle={"bg-gradient-to-b from-red-600 to-yellow-600"}
             />
           }

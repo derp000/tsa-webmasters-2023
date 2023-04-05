@@ -9,5 +9,7 @@ export default function interpolate(arcs) {
     });
   }
 
+  console.log("interpolating")
+
   return arcsData;
 }

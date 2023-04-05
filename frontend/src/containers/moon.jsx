@@ -70,14 +70,14 @@ const oceanus = {
   imgUrl: "/src/assets/HuntsvilleRocket.jfif",
 };
 
-const arcsData = interpolate(
+const arcsData = interpolate([
   tranquil,
   montes,
   oceanus,
   copernicus,
   tycho,
-  tranquil
-);
+  tranquil,
+]);
 // [
 //   {
 //     startLat: tranquil["lat"],

@@ -73,7 +73,7 @@ const crater = {
 //   return arcsData;
 // }
 
-const arcsData = interpolate(canyon, mons, crater, fossae, canyon)
+const arcsData = interpolate([canyon, mons, crater, fossae, canyon]);
 // [
 //   {
 //     startLat: canyon["lat"],
@@ -100,7 +100,7 @@ const arcsData = interpolate(canyon, mons, crater, fossae, canyon)
 //     endLng: canyon["lng"],
 //   },
 // ];
-console.log("logging arc data")
+console.log("logging arc data");
 console.log(arcsData);
 
 const gData = [canyon, fossae, mons, crater];
