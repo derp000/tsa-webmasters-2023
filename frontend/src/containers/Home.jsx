@@ -13,6 +13,7 @@ import AttractionsContainer from "../components/AttractionsContainer";
 import AttractionInteractive from "../components/AttractionInteractive";
 
 import * as mars from "./mars";
+import * as moon from "./moon";
 
 const categories = [
   { name: "About", to: "AboutUs" },
@@ -47,7 +48,25 @@ const Home = () => {
               }
               arcsData={mars.arcsData}
               gData={mars.gData}
+              globeImg={"/src/assets/mars_uv.jpg"}
+              markerColor={"orange"}
               startPos={mars.GLOBE_START}
+              drawerStyle={"bg-gradient-to-b from-orange-700 to-red-500"}
+            />
+          }
+        />
+        <Route
+          path="/Attractions/Moon"
+          element={
+            <AttractionInteractive
+              title="Moon Exploration"
+              body="Explore the surface of the moon just like how the astronauts did five decades ago."
+              arcsData={moon.arcsData}
+              gData={moon.gData}
+              globeImg={"/src/assets/moon_uv.jpg"}
+              markerColor={"lightblue"}
+              startPos={moon.GLOBE_START}
+              drawerStyle={"bg-gradient-to-b from-gray-700 to-blue-400"}
             />
           }
         />

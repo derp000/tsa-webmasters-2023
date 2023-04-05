@@ -8,6 +8,13 @@ const cards = [
     title={"Martian Sightseeing"}
     imgSrc={"src/assets/mars.jpg"}
     to={"/Attractions/Mars"}
+    key="mars"
+  />,
+  <AttractionCard
+    title={"Moon Exploration"}
+    imgSrc="src/assets/moon.jpg"
+    to="/Attractions/Moon"
+    key="moon"
   />,
 ];
 

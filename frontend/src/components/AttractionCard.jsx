@@ -5,7 +5,7 @@ const AttractionCard = ({ title, imgSrc, to, onContentClick }) => {
   let content = (
     <>
       <img
-        className="object-contain object-center h-auto w-full z-10 opacity-50"
+        className="object-contain object-center h-auto min-h-[24rem] bg-black w-full z-10 opacity-50"
         src={imgSrc}
       />
       <h1 className="absolute w-full px-5 text-white font-extrabold text-5xl text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">

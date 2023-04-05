@@ -14,6 +14,7 @@ const GlobeWithPoints = ({
   arcsData,
   gData,
   globeImg,
+  markerColor,
   manageClick,
   // handleClick,
 }) => {
@@ -38,7 +39,7 @@ const GlobeWithPoints = ({
     <div>
       <Globe
         ref={globeEl}
-        globeImageUrl="/src/assets/mars_uv.jpg"
+        globeImageUrl={globeImg}
         arcsData={arcsData}
         // arcColor={"color"}
         arcDashLength={() => 0.8}
@@ -50,7 +51,7 @@ const GlobeWithPoints = ({
         htmlElement={(location) => {
           const el = document.createElement("div");
           el.innerHTML = markerSvg;
-          el.style.color = "orange";
+          el.style.color = markerColor;
           el.style.width = `40px`;
           el.style["pointer-events"] = "auto";
           el.style.cursor = "pointer";

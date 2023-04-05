@@ -4,7 +4,16 @@ import { XCircleIcon } from "@heroicons/react/20/solid";
 import { Link } from "react-router-dom";
 import AttractionNoninteractive from "./AttractionNoninteractive";
 
-const AttractionInteractive = ({ title, body, arcsData, gData, startPos }) => {
+const AttractionInteractive = ({
+  title,
+  body,
+  arcsData,
+  gData,
+  startPos,
+  globeImg,
+  markerColor,
+  drawerStyle,
+}) => {
   const divSizeRef = useRef(null);
 
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
@@ -62,6 +71,8 @@ const AttractionInteractive = ({ title, body, arcsData, gData, startPos }) => {
             // startPos={{ lat: 0, lng: 250, altitude: 3.0 }}
             startPos={startPos}
             manageClick={manageClick}
+            globeImg={globeImg}
+            markerColor={markerColor}
             className="inline"
           />
         </div>
@@ -69,7 +80,9 @@ const AttractionInteractive = ({ title, body, arcsData, gData, startPos }) => {
           <Link to="/Attractions" className="absolute ml-4 mt-4 h-7 w-7">
             <XCircleIcon className="fill-white" />
           </Link>
-          <div className="menu max-w-2xl p-10 bg-gradient-to-b from-orange-700 to-red-500 text-white leading-loose">
+          <div
+            className={`menu max-w-2xl p-10 text-white leading-loose ${drawerStyle}`}
+          >
             <div className="text-4xl font-bold my-5">{title}</div>
             <div className="text-3xl mb-5">{body}</div>
             <div className="text-6xl font-bold mb-5">{name}</div>
