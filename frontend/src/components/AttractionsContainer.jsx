@@ -1,12 +1,12 @@
 import React from "react";
 import AttractionCard from "./AttractionCard";
 import CardContainer from "./CardContainer";
-import HeroImage from "./HeroImage";
+import HeroCenter from "./HeroCenter";
 
 const cards = [
   <AttractionCard
     title={"Martian Sightseeing"}
-    imgSrc={"src/assets/mars.jpg"}
+    imgSrc={"src/assets/mars.png"}
     to={"/Attractions/Mars"}
     key="mars"
   />,
@@ -17,8 +17,8 @@ const cards = [
     key="moon"
   />,
   <AttractionCard
-    title={"Venus"}
-    imgSrc="src/assets/venus_uv.jpg"
+    title={"Venus Voyage"}
+    imgSrc="src/assets/venus.jpeg"
     to="/Attractions/Venus"
     key="venus"
   />,
@@ -27,13 +27,16 @@ const cards = [
 const AttractionsContainer = () => {
   return (
     <div>
-      <HeroImage
-        callToAction={"Find out what we offer"}
-        imgSrc={"src/assets/mars.jpg"}
+      <HeroCenter
+        body={"Click to find what we offer"}
+        bgColor="bg-gradient-to-r from-purple-700 to-red-600"
       />
 
-      <div className="flex flex-col w-full border-opacity-50">
-        <div className="grid card rounded-box">
+      <div
+        className="flex flex-col w-full border-opacity-50 bg-cover"
+        style={{ backgroundImage: `url(src/assets/constellation.jpg)` }}
+      >
+        <div className="grid card rounded-box py-20">
           <CardContainer cards={cards} />
         </div>
       </div>

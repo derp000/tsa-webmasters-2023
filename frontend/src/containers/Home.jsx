@@ -83,10 +83,10 @@ const Home = () => {
               gData={venus.gData}
               globeImg={"/src/assets/venus_uv.jpg"}
               markerColor={"lightblue"}
-              arcColor={"purple"}
+              arcColor={"white"}
               atmosphereColor={"red"}
               startPos={venus.GLOBE_START}
-              drawerStyle={""}
+              drawerStyle={"bg-gradient-to-b from-red-600 to-yellow-600"}
             />
           }
         />

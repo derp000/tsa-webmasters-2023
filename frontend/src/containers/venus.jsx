@@ -22,7 +22,7 @@ const coronae = {
   name: "Venus' Coronae",
   info: (
     <p>
-      The Floor is Lava! Venus is famous for its coronoae, circular patterns
+      The Floor is Lava! Venus is famous for its coronae, circular patterns
       formed by Venus' core releasing heat. These coronae are often accompanied
       by vast lava lakes.
     </p>
