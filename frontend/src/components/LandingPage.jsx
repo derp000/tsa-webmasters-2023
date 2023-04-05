@@ -29,7 +29,7 @@ const LandingPage = () => {
             information, cost, planning, training, vehicles, safety, launch, and
             recovery.
           </p>
-          <div className="btn btn-primary">
+          <div className="btn btn-secondary">
             <NavLink to="/AboutUs">Get Started</NavLink>
           </div>
         </div>

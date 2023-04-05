@@ -54,13 +54,21 @@ const Navbar = ({ categories }) => {
                       to={`/${item.to}`}
                       className={({ isActive }) =>
                         isActive
-                          ? "bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                          ? "bg-neutral text-white px-3 py-2 rounded-md text-sm font-medium"
                           : "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                       }
                     >
                       {item.name}
                     </NavLink>
                   ))}
+                  <NavLink
+                    to="Signup"
+                    className={({ isActive }) =>
+                      isActive
+                        ? "bg-purple-600 text-white px-3 py-2 rounded-md text-sm font-medium"
+                        : "text-gray-300 hover:bg-purple-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    }
+                  >Join</NavLink>
                 </div>
               </div>
             </div>

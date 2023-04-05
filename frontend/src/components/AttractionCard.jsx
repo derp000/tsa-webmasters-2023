@@ -15,7 +15,7 @@ const AttractionCard = ({ title, imgSrc, to, onContentClick }) => {
   );
 
   if (to) {
-    content = <NavLink>{content}</NavLink>;
+    content = <NavLink to={to}>{content}</NavLink>;
   }
 
   return (

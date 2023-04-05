@@ -4,7 +4,7 @@ import Checkbox from "./Checkbox";
 const Checklist = ({ criteria, disclaimer }) => {
   // maybe have it as a hero with a background image
   return (
-    <div className="hero h-fit bg-base-200 px-2">
+    <div className="hero h-fit bg-base-100 px-2">
       <div className={"hero-content"}>
         <div className="max-w-5xl">
           <h6 className="md:text-2xl text-xl font-bold mt-10 text-center">
