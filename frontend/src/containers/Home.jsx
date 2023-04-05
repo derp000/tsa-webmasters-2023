@@ -14,6 +14,7 @@ import AttractionInteractive from "../components/AttractionInteractive";
 
 import * as mars from "./mars";
 import * as moon from "./moon";
+import * as venus from "./venus";
 
 const categories = [
   { name: "About", to: "AboutUs" },
@@ -69,6 +70,23 @@ const Home = () => {
               arcColor={"#8206c4"}
               startPos={moon.GLOBE_START}
               drawerStyle={"bg-gradient-to-b from-gray-700 to-blue-400"}
+            />
+          }
+        />
+        <Route
+          path="/Attractions/Venus"
+          element={
+            <AttractionInteractive
+              title="Venus"
+              body="Visit this alien-like planet and observe it from the safety of your Orbit Transition Vehicle."
+              arcsData={venus.arcsData}
+              gData={venus.gData}
+              globeImg={"/src/assets/venus_uv.jpg"}
+              markerColor={"lightblue"}
+              arcColor={"purple"}
+              atmosphereColor={"red"}
+              startPos={venus.GLOBE_START}
+              drawerStyle={""}
             />
           }
         />

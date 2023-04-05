@@ -1,3 +1,5 @@
+import interpolate from "./interpolateArcs";
+
 export { arcsData, gData };
 export const GLOBE_START = { lat: 0, lng: 0, altitude: 2.0 };
 
@@ -68,37 +70,45 @@ const oceanus = {
   imgUrl: "/src/assets/HuntsvilleRocket.jfif",
 };
 
-const arcsData = [
-  {
-    startLat: tranquil["lat"],
-    startLng: tranquil["lng"],
-    endLat: montes["lat"],
-    endLng: montes["lng"],
-  },
-  {
-    startLat: montes["lat"],
-    startLng: montes["lng"],
-    endLat: oceanus["lat"],
-    endLng: oceanus["lng"],
-  },
-  {
-    startLat: oceanus["lat"],
-    startLng: oceanus["lng"],
-    endLat: copernicus["lat"],
-    endLng: copernicus["lng"],
-  },
-  {
-    startLat: copernicus["lat"],
-    startLng: copernicus["lng"],
-    endLat: tycho["lat"],
-    endLng: tycho["lng"],
-  },
-  {
-    startLat: tycho["lat"],
-    startLng: tycho["lng"],
-    endLat: tranquil["lat"],
-    endLng: tranquil["lng"],
-  },
-];
+const arcsData = interpolate(
+  tranquil,
+  montes,
+  oceanus,
+  copernicus,
+  tycho,
+  tranquil
+);
+// [
+//   {
+//     startLat: tranquil["lat"],
+//     startLng: tranquil["lng"],
+//     endLat: montes["lat"],
+//     endLng: montes["lng"],
+//   },
+//   {
+//     startLat: montes["lat"],
+//     startLng: montes["lng"],
+//     endLat: oceanus["lat"],
+//     endLng: oceanus["lng"],
+//   },
+//   {
+//     startLat: oceanus["lat"],
+//     startLng: oceanus["lng"],
+//     endLat: copernicus["lat"],
+//     endLng: copernicus["lng"],
+//   },
+//   {
+//     startLat: copernicus["lat"],
+//     startLng: copernicus["lng"],
+//     endLat: tycho["lat"],
+//     endLng: tycho["lng"],
+//   },
+//   {
+//     startLat: tycho["lat"],
+//     startLng: tycho["lng"],
+//     endLat: tranquil["lat"],
+//     endLng: tranquil["lng"],
+//   },
+// ];
 
 const gData = [tranquil, montes, tycho, copernicus, oceanus];

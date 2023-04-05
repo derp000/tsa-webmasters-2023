@@ -12,6 +12,7 @@ const AttractionInteractive = ({
   startPos,
   globeImg,
   arcColor,
+  atmosphereColor,
   markerColor,
   drawerStyle,
 }) => {
@@ -74,6 +75,7 @@ const AttractionInteractive = ({
             manageClick={manageClick}
             globeImg={globeImg}
             arcColor={arcColor}
+            atmosphereColor={atmosphereColor}
             markerColor={markerColor}
             className="inline"
           />

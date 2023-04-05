@@ -16,6 +16,7 @@ const GlobeWithPoints = ({
   globeImg,
   arcColor,
   markerColor,
+  atmosphereColor,
   manageClick,
   // handleClick,
 }) => {
@@ -46,7 +47,7 @@ const GlobeWithPoints = ({
         arcDashLength={() => 0.8}
         arcDashGap={() => 0.1}
         arcDashAnimateTime={() => 1500}
-        // atmosphereColor={"purple"}
+        atmosphereColor={atmosphereColor}
         atmosphereAltitude={0.25}
         htmlElementsData={gData}
         htmlElement={(location) => {

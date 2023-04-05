@@ -16,6 +16,12 @@ const cards = [
     to="/Attractions/Moon"
     key="moon"
   />,
+  <AttractionCard
+    title={"Venus"}
+    imgSrc="src/assets/venus_uv.jpg"
+    to="/Attractions/Venus"
+    key="venus"
+  />,
 ];
 
 const AttractionsContainer = () => {

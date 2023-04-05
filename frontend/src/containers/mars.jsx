@@ -1,3 +1,5 @@
+import interpolate from "./interpolateArcs";
+
 export { arcsData, gData };
 export const GLOBE_START = { lat: 0, lng: 250, altitude: 3.0 };
 
@@ -57,32 +59,48 @@ const crater = {
 };
 // const mount = { lat: -5.08, lng: 137.85, name: "4thing", info: "d" };
 
-const arcsData = [
-  {
-    startLat: canyon["lat"],
-    startLng: canyon["lng"],
-    endLat: mons["lat"],
-    endLng: mons["lng"],
-  },
-  {
-    startLat: mons["lat"],
-    startLng: mons["lng"],
-    endLat: crater["lat"],
-    endLng: crater["lng"],
-  },
-  {
-    startLat: crater["lat"],
-    startLng: crater["lng"],
-    endLat: fossae["lat"],
-    endLng: fossae["lng"],
-  },
-  {
-    startLat: fossae["lat"],
-    startLng: fossae["lng"],
-    endLat: canyon["lat"],
-    endLng: canyon["lng"],
-  },
-];
+// function interpolate(...arcs) {
+//   const arcsData = [];
+//   for (let i = 0; i < arcs.length - 1; i++) {
+//     arcsData.push({
+//       startLat: arcs[i]["lat"],
+//       startLng: arcs[i]["lng"],
+//       endLat: arcs[i + 1]["lat"],
+//       endLng: arcs[i + 1]["lng"],
+//     });
+//   }
+
+//   return arcsData;
+// }
+
+const arcsData = interpolate(canyon, mons, crater, fossae, canyon)
+// [
+//   {
+//     startLat: canyon["lat"],
+//     startLng: canyon["lng"],
+//     endLat: mons["lat"],
+//     endLng: mons["lng"],
+//   },
+//   {
+//     startLat: mons["lat"],
+//     startLng: mons["lng"],
+//     endLat: crater["lat"],
+//     endLng: crater["lng"],
+//   },
+//   {
+//     startLat: crater["lat"],
+//     startLng: crater["lng"],
+//     endLat: fossae["lat"],
+//     endLng: fossae["lng"],
+//   },
+//   {
+//     startLat: fossae["lat"],
+//     startLng: fossae["lng"],
+//     endLat: canyon["lat"],
+//     endLng: canyon["lng"],
+//   },
+// ];
+console.log("logging arc data")
 console.log(arcsData);
 
 const gData = [canyon, fossae, mons, crater];

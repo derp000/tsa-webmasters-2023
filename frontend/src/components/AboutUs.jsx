@@ -29,8 +29,8 @@ const AboutUs = () => {
         imgSrc={"src/assets/HuntsvilleRocket.jfif"}
       />
 
-      <div className="flex flex-col w-full border-opacity-50 bg-blue-400">
-        <div className="divider before:bg-purple-900 after:bg-purple-900"></div>
+      <div className="flex flex-col w-full border-opacity-50 bg-gradient-to-r from-blue-400 to-fuchsia-400">
+        <div className="divider before:bg-purple-200 after:bg-purple-200"></div>
         <div className="grid card rounded-box">
           <HeroText
             heading={"The best of the best"}
@@ -40,7 +40,7 @@ const AboutUs = () => {
             bgLink={bgLink}
           />
         </div>
-        <div className="divider before:bg-purple-900 after:bg-purple-900"></div>
+        <div className="divider before:bg-purple-200 after:bg-purple-200"></div>
         <div className="grid card rounded-box">
           <HeroText
             heading={"Welcome to AL"}
@@ -51,7 +51,7 @@ const AboutUs = () => {
             bgLink={bgLink}
           />
         </div>
-        <div className="divider before:bg-purple-900 after:bg-purple-900"></div>
+        <div className="divider before:bg-purple-200 after:bg-purple-200"></div>
         <div className="grid card rounded-box">
           <HeroText
             heading={"Training"}
@@ -62,7 +62,7 @@ const AboutUs = () => {
           />
         </div>
         {/* move to another link/component */}
-        <div className="divider before:bg-purple-900 after:bg-purple-900"></div>
+        <div className="divider before:bg-purple-200 after:bg-purple-200"></div>
         <div className="grid card rounded-box">
           {/* <HeroCenter body={"Testimonials"} />
           <HeroReview reviews={reviews} /> */}
