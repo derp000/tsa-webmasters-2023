@@ -20,7 +20,7 @@ const categories = [
   { name: "Safety/Logistics", to: "Safety" },
   { name: "Pricing", to: "Pricing" },
   // { name: "Legal", to: "Legal" },
-  { name: "Join", to: "Signup" },
+  // { name: "Join", to: "Signup" },
 ];
 
 const attractions = ["Mars", "Moon"];

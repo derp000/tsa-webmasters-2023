@@ -38,6 +38,7 @@ const Signup = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [showError, setShowError] = useState(false);
+  const [active, setActive] = useState(false);
 
   const formContent = [
     {
@@ -101,7 +102,10 @@ const Signup = () => {
         <>
           <Checklist criteria={criteria} className="w-full content-center" />
           <div className="hero p-4">
-            <div className="btn btn-primary" onClick={() => setStep(step + 1)}>
+            <div
+              className="btn btn-primary mb-4"
+              onClick={() => setStep(step + 1)}
+            >
               Next
             </div>
           </div>
@@ -114,11 +118,7 @@ const Signup = () => {
       renderedStep = (
         <>
           <Form formContent={formContent} />
-          {showError && (
-            <Alert
-              error={"Invalid email or phone number!"}
-            />
-          )}
+          {showError && <Alert error={"Invalid email or phone number!"} />}
           <div className="hero p-4">
             <div className="grid grid-cols-2 gap-5">
               <div
@@ -130,13 +130,14 @@ const Signup = () => {
               <div
                 className="btn btn-primary"
                 onClick={() => {
-                  if (
-                    !/.+@.+\.[A-Za-z]+$/.test(email) &&
-                    !/[0-9]/.test(phone)
-                  ) {
-                    setShowError(true);
-                    return;
-                  }
+                  // if (
+                  //   !/.+@.+\.[A-Za-z]+$/.test(email) &&
+                  //   !/[0-9]/.test(phone)
+                  // ) {
+                  //   setShowError(true);
+                  //   return;
+                  // }
+                  // setShowError(false);
                   setStep(step + 1);
                 }}
               >
@@ -173,7 +174,8 @@ const Signup = () => {
           <Confetti
             width={width}
             height={height}
-            numberOfPieces={numParticles}
+            numberOfPieces={200}
+            recycle={false}
           />
           <div className="hero h-fit px-2">
             <div className="max-w-5xl text-center">
@@ -212,7 +214,7 @@ const Signup = () => {
         <StepsNav currentStep={step} />
       </div>
       {renderedStep}
-      {step}
+      {/* {step} */}
     </div>
   );
 };
