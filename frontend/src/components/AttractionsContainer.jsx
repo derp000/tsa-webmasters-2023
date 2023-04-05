@@ -3,23 +3,20 @@ import AttractionCard from "./AttractionCard";
 import CardContainer from "./CardContainer";
 import HeroImage from "./HeroImage";
 
-const cards = [];
-for (let i = 0; i < 6; i++) {
-  cards.push(
-    <AttractionCard
-      title={"Title Here"}
-      imgSrc={"src/assets/HuntsvilleRocket.jfif"}
-      to={"/Attractions/Mars"}
-    />
-  );
-}
+const cards = [
+  <AttractionCard
+    title={"Martian Sightseeing"}
+    imgSrc={"src/assets/mars.jpg"}
+    to={"/Attractions/Mars"}
+  />,
+];
 
 const AttractionsContainer = () => {
   return (
     <div>
       <HeroImage
         callToAction={"Find out what we offer"}
-        imgSrc={"src/assets/HuntsvilleRocket.jfif"}
+        imgSrc={"src/assets/mars.jpg"}
       />
 
       <div className="flex flex-col w-full border-opacity-50">

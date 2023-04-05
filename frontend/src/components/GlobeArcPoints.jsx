@@ -13,6 +13,7 @@ const GlobeArcPoints = ({
   startPos,
   arcsData,
   gData,
+  globeImg,
   manageClick,
   // handleClick,
 }) => {

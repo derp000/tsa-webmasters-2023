@@ -6,13 +6,15 @@ import HeroText from "./HeroText";
 import ReviewCard from "./ReviewCard";
 
 import * as img from "./aboutUsImages";
-import * as text from "./aboutUsText"
+import * as text from "./aboutUsText";
 
 const reviews = [
   <ReviewCard key="r1" />,
   <ReviewCard key="r2" />,
   <ReviewCard key="r3" />,
 ];
+
+const bgLink = `url("src/assets/constellation.jpg")`;
 
 // TODO: mission statement
 // TODO: contact info footer
@@ -27,16 +29,18 @@ const AboutUs = () => {
         imgSrc={"src/assets/HuntsvilleRocket.jfif"}
       />
 
-      <div className="flex flex-col w-full border-opacity-50">
+      <div className="flex flex-col w-full border-opacity-50 bg-blue-400">
+        <div className="divider before:bg-purple-900 after:bg-purple-900"></div>
         <div className="grid card rounded-box">
           <HeroText
             heading={"The best of the best"}
             title={"Home to leading aerospace professionals."}
             body={text.bodyIntro}
             images={[img.nasa, img.esa]}
+            bgLink={bgLink}
           />
         </div>
-        <div className="divider"></div>
+        <div className="divider before:bg-purple-900 after:bg-purple-900"></div>
         <div className="grid card rounded-box">
           <HeroText
             heading={"Welcome to AL"}
@@ -44,27 +48,24 @@ const AboutUs = () => {
             body={text.bodySite}
             images={[img.huntsville]}
             reverseAlign={true}
+            bgLink={bgLink}
           />
         </div>
-        <div className="divider"></div>
+        <div className="divider before:bg-purple-900 after:bg-purple-900"></div>
         <div className="grid card rounded-box">
           <HeroText
             heading={"Training"}
             title={"This is how we'll prepare you."}
             body={text.bodyTrain}
             images={[img.meteo]}
+            bgLink={bgLink}
           />
         </div>
         {/* move to another link/component */}
-        <div className="divider"></div>
-        {/* will lead to attractions link */}
-        <div>
-          <HeroCenter body={"What we offer"} />
-        </div>
-        <div className="divider"></div>
+        <div className="divider before:bg-purple-900 after:bg-purple-900"></div>
         <div className="grid card rounded-box">
-          <HeroCenter body={"Testimonials"} />
-          <HeroReview reviews={reviews} />
+          {/* <HeroCenter body={"Testimonials"} />
+          <HeroReview reviews={reviews} /> */}
         </div>
         {/* have customer reviews here */}
       </div>

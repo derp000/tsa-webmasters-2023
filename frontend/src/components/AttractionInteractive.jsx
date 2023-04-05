@@ -3,7 +3,7 @@ import GlobeArcPoints from "./GlobeArcPoints";
 import { XCircleIcon } from "@heroicons/react/20/solid";
 import { Link } from "react-router-dom";
 
-const AttractionInteractive = ({ title, body, arcsData, gData}) => {
+const AttractionInteractive = ({ title, body, arcsData, gData, startPos }) => {
   const divSizeRef = useRef(null);
 
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
@@ -58,6 +58,7 @@ const AttractionInteractive = ({ title, body, arcsData, gData}) => {
             height={dimensions["height"]}
             arcsData={arcsData}
             gData={gData}
+            startPos={{ lat: 0, lng: 250, altitude: 3.0 }}
             manageClick={manageClick}
             className="inline"
           />

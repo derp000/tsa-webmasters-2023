@@ -7,6 +7,7 @@ const HeroText = ({
   images,
   reverseAlign,
   multiHero,
+  bgLink,
 }) => {
   // single hero case
   let bodyPadding = "py-6";
@@ -52,7 +53,10 @@ const HeroText = ({
   }
 
   return (
-    <div className="hero h-fit bg-base-200 px-2">
+    <div
+      className={`hero h-fit bg-base-200 px-2 ${bgLink ? "bg-cover" : ""}`}
+      style={bgLink ? { backgroundImage: bgLink } : {}}
+    >
       <div
         className={`hero-content ${reverseAlign ? "text-right" : "text-left"} ${
           !heading && !title ? "py-0" : ""
