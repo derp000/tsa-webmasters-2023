@@ -160,7 +160,7 @@ const Signup = () => {
             </div>
           </div>
           <div className="hero p-4">
-            <div className="btn btn-primary" onClick={() => setStep(step - 1)}>
+            <div className="btn btn-primary mb-5" onClick={() => setStep(step - 1)}>
               Previous
             </div>
           </div>

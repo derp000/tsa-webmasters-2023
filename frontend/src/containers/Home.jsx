@@ -37,22 +37,20 @@ const Home = () => {
         />
         <Route path="/AboutUs" element={<AboutUs />} />
         <Route path="/Attractions" element={<AttractionsContainer />} />
-        {attractions.map((a) => (
-          <Route
-            path={`/Attractions/${a}`}
-            element={
-              <AttractionInteractive
-                title={"Martian Sightseeing"}
-                body={
-                  "Visit some of the most awe-inspiring landscapes Mars has to offer. Click on a marker to learn more."
-                }
-                arcsData={mars.arcsData}
-                gData={mars.gData}
-              />
-            }
-            key={a}
-          />
-        ))}
+        <Route
+          path={"/Attractions/Mars"}
+          element={
+            <AttractionInteractive
+              title={"Martian Sightseeing"}
+              body={
+                "Learn about some of the most awe-inspiring landscapes Mars you'll visit. Click on a marker to learn more."
+              }
+              arcsData={mars.arcsData}
+              gData={mars.gData}
+            />
+          }
+        />
+
         <Route path="/Safety" element={<Logistics />} />
         <Route path="/Pricing" element={<Pricing />} />
 

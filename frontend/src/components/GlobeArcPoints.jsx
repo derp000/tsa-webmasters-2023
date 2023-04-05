@@ -50,8 +50,8 @@ const GlobeArcPoints = ({
         htmlElement={(location) => {
           const el = document.createElement("div");
           el.innerHTML = markerSvg;
-          el.style.color = "lightblue";
-          el.style.width = `20px`;
+          el.style.color = "orange";
+          el.style.width = `40px`;
           el.style["pointer-events"] = "auto";
           el.style.cursor = "pointer";
           el.onclick = () => handleClick(location);
