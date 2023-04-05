@@ -13,20 +13,20 @@ const tranquil = {
       on the moon.
     </p>
   ),
-  imgUrl: "/src/assets/HuntsvilleRocket.jfif",
+  imgUrl: "/src/assets/moon/tranquil.jpg",
 };
 
 const montes = {
   lat: 18.9,
   lng: -3.7,
-  name: "Montes Appenius",
+  name: "Montes Appenninus",
   info: (
     <p>
       The tallest mountain range on the moon and the landing sight of the Apollo
       15 mission.
     </p>
   ),
-  imgUrl: "/src/assets/HuntsvilleRocket.jfif",
+  imgUrl: "/src/assets/moon/montes.png",
 };
 
 const tycho = {
@@ -39,7 +39,7 @@ const tycho = {
       15 mission.
     </p>
   ),
-  imgUrl: "/src/assets/HuntsvilleRocket.jfif",
+  imgUrl: "/src/assets/moon/tycho.png",
 };
 
 const copernicus = {
@@ -53,7 +53,7 @@ const copernicus = {
       bright spot in the dark maria.
     </p>
   ),
-  imgUrl: "/src/assets/HuntsvilleRocket.jfif",
+  imgUrl: "/src/assets/moon/copernicus.jpg",
 };
 
 const oceanus = {
@@ -67,7 +67,7 @@ const oceanus = {
       of the Apollo 12 mission.
     </p>
   ),
-  imgUrl: "/src/assets/HuntsvilleRocket.jfif",
+  imgUrl: "/src/assets/moon/oceanus.jpg",
 };
 
 const arcsData = interpolate([

@@ -95,7 +95,7 @@ const Home = () => {
           path="/Attractions/Mercury"
           element={
             <AttractionInteractive
-              title="Mercury"
+              title="Mercury Adventure"
               body="Find out what this mysterious little planet has in store."
               arcsData={mercury.arcsData}
               gData={mercury.gData}
@@ -104,7 +104,7 @@ const Home = () => {
               arcColor={"white"}
               atmosphereColor={"orange"}
               startPos={mercury.GLOBE_START}
-              drawerStyle={"bg-gradient-to-b from-red-600 to-yellow-600"}
+              drawerStyle={"bg-gradient-to-b from-blue-900 to-fuchsia-400"}
             />
           }
         />

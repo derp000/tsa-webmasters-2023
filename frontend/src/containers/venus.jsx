@@ -1,25 +1,25 @@
 import interpolate from "./interpolateArcs";
 
 export { arcsData, gData };
-export const GLOBE_START = { lat: 0, lng: 0, altitude: 2.0 };
+export const GLOBE_START = { lat: 10, lng: 190, altitude: 2.5 };
 
 const rift = {
-  lat: 10,
-  lng: 190,
-  name: "Venus' Rift Zones",
+  lat: 22,
+  lng: 183.5,
+  name: "Devana Chasma",
   info: (
     <p>
       Visit the Alien Rift Zones. These rift zones are made up of parallel
       ridges and valleys hundreds of kilometers long.
     </p>
   ),
-  imgUrl: "/src/assets/HuntsvilleRocket.jfif",
+  imgUrl: "/src/assets/venus/rift.png",
 };
 
-const coronae = {
-  lat: 0,
-  lng: 250,
-  name: "Venus' Coronae",
+const fotla = {
+  lat: -58.5,
+  lng: 163.5,
+  name: "Fotla Corona",
   info: (
     <p>
       The Floor is Lava! Venus is famous for its coronae, circular patterns
@@ -27,7 +27,7 @@ const coronae = {
       by vast lava lakes.
     </p>
   ),
-  imgUrl: "/src/assets/HuntsvilleRocket.jfif",
+  imgUrl: "/src/assets/venus/fotla.jpg",
 };
 
 const montes = {
@@ -41,7 +41,7 @@ const montes = {
       Montes the brightest spot on Venus.
     </p>
   ),
-  imgUrl: "/src/assets/HuntsvilleRocket.jfif",
+  imgUrl: "/src/assets/venus/montes.jpg",
 };
 
 const venera = {
@@ -57,8 +57,8 @@ const venera = {
       astronomical success story.
     </p>
   ),
-  imgUrl: "/src/assets/HuntsvilleRocket.jfif",
+  imgUrl: "/src/assets/venus/venera.jpg",
 };
 
-const gData = [rift, coronae, montes, venera];
+const gData = [rift, fotla, montes, venera];
 const arcsData = interpolate(gData);

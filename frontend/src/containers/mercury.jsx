@@ -1,7 +1,7 @@
 import interpolate from "./interpolateArcs";
 
 export { arcsData, gData };
-export const GLOBE_START = { lat: 0, lng: 0, altitude: 2.0 };
+export const GLOBE_START = { lat: 30, lng: -190, altitude: 2.0 };
 
 const caloris = {
   lat: 30,
@@ -15,13 +15,13 @@ const caloris = {
       study the Mercury rock composition for signs of previous lava oceans.
     </p>
   ),
-  imgUrl: "/src/assets/HuntsvilleRocket.jfif",
+  imgUrl: "/src/assets/mercury/caloris.png",
 };
 
 const ghost = {
-  lat: 60,
-  lng: 37,
-  name: "Ghost Craters",
+  lat: -1.6,
+  lng: -253.1,
+  name: "Izquierdo Ghost Crater",
   info: (
     <p>
       Search for mysteries of the past at Mercury's ghost craters. On the cosmic
@@ -29,7 +29,7 @@ const ghost = {
       obscured or completely hidden.
     </p>
   ),
-  imgUrl: "/src/assets/HuntsvilleRocket.jfif",
+  imgUrl: "/src/assets/mercury/ghost.png",
 };
 
 const pole = {
@@ -45,7 +45,7 @@ const pole = {
       and the Mercury Poles.
     </p>
   ),
-  imgUrl: "/src/assets/HuntsvilleRocket.jfif",
+  imgUrl: "/src/assets/mercury/pole.jpg",
 };
 
 const rembrandt = {
@@ -61,8 +61,8 @@ const rembrandt = {
       the wheel and axle were already present on Mercury.
     </p>
   ),
-  imgUrl: "/src/assets/HuntsvilleRocket.jfif",
+  imgUrl: "/src/assets/mercury/rembrandt.jpg",
 };
 
-const gData = [caloris, ghost, pole, rembrandt];
-const arcsData = interpolate(gData);
+const gData = [caloris, pole, ghost, rembrandt];
+const arcsData = interpolate([...gData, caloris]);

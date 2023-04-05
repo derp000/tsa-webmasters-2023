@@ -92,7 +92,7 @@ const AttractionInteractive = ({
             <div className="text-6xl font-bold mb-5">{name}</div>
             <div className="text-2xl mb-5">{info}</div>
             <div>
-              <img src={imgUrl} />
+              <img src={imgUrl} className="rounded-lg max-h-[30rem]" />
             </div>
           </div>
         </div>

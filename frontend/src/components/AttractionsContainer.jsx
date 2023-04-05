@@ -23,7 +23,7 @@ const cards = [
     key="venus"
   />,
   <AttractionCard
-    title={"Mercury"}
+    title={"Mercury Adventure"}
     imgSrc={"src/assets/mercury.jpg"}
     to="/Attractions/Mercury"
     key="mercury"
