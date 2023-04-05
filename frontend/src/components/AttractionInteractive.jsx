@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import GlobeArcPoints from "./GlobeArcPoints";
 import { XCircleIcon } from "@heroicons/react/20/solid";
 import { Link } from "react-router-dom";
+import AttractionNoninteractive from "./AttractionNoninteractive";
 
 const AttractionInteractive = ({ title, body, arcsData, gData, startPos }) => {
   const divSizeRef = useRef(null);
@@ -65,20 +66,22 @@ const AttractionInteractive = ({ title, body, arcsData, gData, startPos }) => {
         </div>
         <div className="drawer-side">
           <Link to="/Attractions" className="absolute ml-4 mt-4 h-7 w-7">
-            <XCircleIcon className="fill-black" />
+            <XCircleIcon className="fill-white" />
           </Link>
-          <div className="menu max-w-2xl p-10 bg-orange-200 text-black leading-loose">
-            <div className="text-4xl font-bold mt-5">{title}</div>
-            <div className="text-xl mb-5">{body}</div>
-            <div className="text-6xl font-bold">{name}</div>
-            <div>{info}</div>
+          <div className="menu max-w-2xl p-10 bg-gradient-to-b from-orange-700 to-red-500 text-white leading-loose">
+            <div className="text-4xl font-bold my-5">{title}</div>
+            <div className="text-3xl mb-5">{body}</div>
+            <div className="text-6xl font-bold mb-5">{name}</div>
+            <div className="text-2xl mb-5">{info}</div>
             <div>
               <img src={imgUrl} />
             </div>
           </div>
         </div>
       </div>
-      <div className="lg:hidden block">Hi</div>
+      <div className="lg:hidden block">
+        <AttractionNoninteractive />
+      </div>
     </>
   );
 };
