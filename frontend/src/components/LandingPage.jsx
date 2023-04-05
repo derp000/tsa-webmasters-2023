@@ -1,5 +1,5 @@
 import React from "react";
-import MarsGlobeArc from "./MarsGlobeArc";
+import GlobeRandomArcs from "./GlobeRandomArcs";
 import useWindowDimensions from "./viewport";
 import { NavLink } from "react-router-dom";
 
@@ -10,7 +10,7 @@ const LandingPage = () => {
 
   return (
     <div className="hero max-w-screen min-h-screen bg-black px-10">
-      <MarsGlobeArc
+      <GlobeRandomArcs
         className="absolute ml-10"
         width={width - 100}
         height={height - 100}

@@ -7,7 +7,7 @@ const markerSvg = `<svg viewBox="-4 0 36 36">
     <circle fill="black" cx="14" cy="14" r="7"></circle>
   </svg>`;
 
-const GlobeArcPoints = ({
+const GlobeWithPoints = ({
   width,
   height,
   startPos,
@@ -65,4 +65,4 @@ const GlobeArcPoints = ({
   );
 };
 
-export default GlobeArcPoints;
+export default GlobeWithPoints;

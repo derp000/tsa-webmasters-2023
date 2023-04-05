@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import GlobeArcPoints from "./GlobeArcPoints";
+import GlobeWithPoints from "./GlobeWithPoints";
 import { XCircleIcon } from "@heroicons/react/20/solid";
 import { Link } from "react-router-dom";
 import AttractionNoninteractive from "./AttractionNoninteractive";
@@ -54,12 +54,13 @@ const AttractionInteractive = ({ title, body, arcsData, gData, startPos }) => {
         >
           Open drawer
         </label> */}
-          <GlobeArcPoints
+          <GlobeWithPoints
             width={dimensions["width"]}
             height={dimensions["height"]}
             arcsData={arcsData}
             gData={gData}
-            startPos={{ lat: 0, lng: 250, altitude: 3.0 }}
+            // startPos={{ lat: 0, lng: 250, altitude: 3.0 }}
+            startPos={startPos}
             manageClick={manageClick}
             className="inline"
           />
@@ -80,7 +81,7 @@ const AttractionInteractive = ({ title, body, arcsData, gData, startPos }) => {
         </div>
       </div>
       <div className="lg:hidden block">
-        <AttractionNoninteractive />
+        <AttractionNoninteractive gData={gData} />
       </div>
     </>
   );

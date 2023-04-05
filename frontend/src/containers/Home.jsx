@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 import NavbarTest from "../components/NavbarTest";
 import Signup from "../components/Signup";
 import Logistics from "../components/Logistics";
-import GlobeArcPoints from "../components/GlobeArcPoints";
+import GlobeWithPoints from "../components/GlobeWithPoints";
 import MarsGlobe from "../components/MarsGlobe";
 import AttractionsContainer from "../components/AttractionsContainer";
 import AttractionInteractive from "../components/AttractionInteractive";
@@ -47,6 +47,7 @@ const Home = () => {
               }
               arcsData={mars.arcsData}
               gData={mars.gData}
+              startPos={mars.GLOBE_START}
             />
           }
         />
@@ -55,7 +56,7 @@ const Home = () => {
         <Route path="/Pricing" element={<Pricing />} />
 
         <Route path="/Legal" element={<Legal />} />
-        <Route path="/Testing4" element={<GlobeArcPoints />} />
+        {/* <Route path="/Testing4" element={<GlobeArcPoints />} /> */}
         <Route path="/Testing2" element={<MarsGlobe />} />
         <Route path="/Testing3" element={<NavbarTest />} />
         <Route path="/Signup" element={<Signup />} />

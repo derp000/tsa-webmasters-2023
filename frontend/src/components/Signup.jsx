@@ -34,7 +34,6 @@ const criteria = [
 const Signup = () => {
   const { width, height } = useWindowDimensions();
   const [step, setStep] = useState(1);
-  const [numParticles, setNumParticles] = useState(200);
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [showError, setShowError] = useState(false);
@@ -60,18 +59,6 @@ const Signup = () => {
       handleChange: () => setPhone((e) => e.target.value),
     },
   ];
-
-  useEffect(() => {
-    function onTimeout() {
-      setNumParticles(0);
-    }
-
-    const timeoutId = setTimeout(onTimeout, 5000);
-
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, []);
 
   const cards = [];
   for (let i = 0; i < 6; i++) {

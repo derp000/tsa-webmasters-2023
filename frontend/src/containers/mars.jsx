@@ -1,4 +1,5 @@
 export { arcsData, gData };
+export const GLOBE_START = { lat: 0, lng: 250, altitude: 3.0 };
 
 const canyon = {
   lat: -13.9,

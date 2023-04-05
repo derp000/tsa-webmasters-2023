@@ -5,7 +5,7 @@ const HeroCenter = ({ heading, body, bgColor }) => {
     <div
       className={`hero h-fit px-2 ${bgColor}`}
     >
-      <div className="hero-content text-center">
+      <div className="hero-content text-white text-center">
         <div className="max-w-5xl my-10">
           <h6 className="md:text-2xl text-xl font-bold">
             {heading}

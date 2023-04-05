@@ -2,7 +2,7 @@ import { React, useRef, useEffect, useState } from "react";
 
 import Globe from "react-globe.gl";
 
-const MarsGlobeArc = ({ width, height, startPos }) => {
+const GlobeRandomArcs = ({ width, height, startPos }) => {
   const globeEl = useRef();
 
   useEffect(() => {
@@ -50,4 +50,4 @@ const MarsGlobeArc = ({ width, height, startPos }) => {
   );
 };
 
-export default MarsGlobeArc;
+export default GlobeRandomArcs;

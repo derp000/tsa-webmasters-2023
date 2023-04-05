@@ -5,36 +5,43 @@ import HeroReview from "./HeroReview";
 import HeroText from "./HeroText";
 import ReviewCard from "./ReviewCard";
 
-import * as img from "./aboutUsImages";
-import * as text from "./aboutUsText";
-
 const reviews = [
   <ReviewCard key="r1" />,
   <ReviewCard key="r2" />,
   <ReviewCard key="r3" />,
 ];
 
-const bgLink = `url("src/assets/constellation.jpg")`;
+const bgLink = `url("/src/assets/constellation.jpg")`;
 
-const AttractionNoninteractive = () => {
+const AttractionNoninteractive = ({ gData }) => {
   return (
     <div>
       <HeroImage
         callToAction={"Martian Sightseeing"}
-        imgSrc={"src/assets/HuntsvilleRocket.jfif"}
+        imgSrc={"/src/assets/HuntsvilleRocket.jfif"}
       />
 
       <div className="flex flex-col w-full border-opacity-50 bg-blue-400">
+        {gData.map((location) => (
+          <>
+            <div className="divider before:bg-purple-900 after:bg-purple-900"></div>
+            <div className="grid card rounded-box">
+              <HeroText
+                title={location.name}
+                body={location.info}
+                images={[
+                  <img
+                    src={location.imgUrl}
+                    className="mt-10 mx-auto md:w-[48rem] md:h-[28rem] w-[32rem] h-[18rem]"
+                  />,
+                ]}
+                bgLink={bgLink}
+              />
+            </div>
+          </>
+        ))}
         <div className="divider before:bg-purple-900 after:bg-purple-900"></div>
-        <div className="grid card rounded-box">
-          <HeroText
-            title={"Valles Marineris Canyon"}
-            body={text.bodyIntro}
-            images={[img.nasa, img.esa]}
-            bgLink={bgLink}
-          />
-        </div>
-        <div className="divider before:bg-purple-900 after:bg-purple-900"></div>
+        {/* <div className="divider before:bg-purple-900 after:bg-purple-900"></div>
         <div className="grid card rounded-box">
           <HeroText
             heading={"Welcome to AL"}
@@ -55,13 +62,13 @@ const AttractionNoninteractive = () => {
             bgLink={bgLink}
           />
         </div>
-        {/* move to another link/component */}
+        {/* move to another link/component 
         <div className="divider before:bg-purple-900 after:bg-purple-900"></div>
         <div className="grid card rounded-box">
           {/* <HeroCenter body={"Testimonials"} />
-          <HeroReview reviews={reviews} /> */}
+          <HeroReview reviews={reviews} />
         </div>
-        {/* have customer reviews here */}
+        have customer reviews here */}
       </div>
     </div>
   );

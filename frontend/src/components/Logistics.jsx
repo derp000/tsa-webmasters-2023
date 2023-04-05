@@ -62,7 +62,6 @@ const Logistics = () => {
           <HeroCenter
             body={"Meet our Vehicles"}
             bgColor={"bg-gradient-to-r from-purple-500 to-indigo-500"}
-            className="text-white"
           />
         </div>
         <div className="divider before:bg-purple-900 after:bg-purple-900"></div>
