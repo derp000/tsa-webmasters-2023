@@ -54,7 +54,7 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <p>Webmaster Team #NUMBER - Union County Magnet High School TSA</p>
+        <p>Webmaster Team #2192-1</p>
       </div>
     </footer>
   );

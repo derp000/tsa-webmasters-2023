@@ -33,6 +33,7 @@ const AttractionNoninteractive = ({ gData }) => {
                   <img
                     src={location.imgUrl}
                     className="mt-10 mx-auto md:w-[48rem] md:h-[28rem] w-[32rem] h-[18rem]"
+                    key={location.name}
                   />,
                 ]}
                 bgLink={bgLink}

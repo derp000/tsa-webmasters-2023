@@ -30,7 +30,7 @@ const LandingPage = () => {
             recovery.
           </p>
           <div className="btn btn-secondary">
-            <NavLink to="/AboutUs">Get Started</NavLink>
+            <NavLink to="/Info">Get Started</NavLink>
           </div>
         </div>
       </div>

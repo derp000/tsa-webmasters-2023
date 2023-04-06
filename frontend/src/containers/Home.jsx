@@ -11,6 +11,7 @@ import GlobeWithPoints from "../components/GlobeWithPoints";
 import MarsGlobe from "../components/MarsGlobe";
 import AttractionsContainer from "../components/AttractionsContainer";
 import AttractionInteractive from "../components/AttractionInteractive";
+import AboutUsTSA from "../components/AboutUsTSA";
 
 import * as mars from "./mars";
 import * as moon from "./moon";
@@ -18,10 +19,11 @@ import * as venus from "./venus";
 import * as mercury from "./mercury";
 
 const categories = [
-  { name: "About", to: "AboutUs" },
+  { name: "Home", to: "Info" },
   { name: "Attractions", to: "Attractions" },
-  { name: "Safety/Logistics", to: "Safety" },
+  { name: "Safety/Logistics", to: "SafetyLogistics" },
   { name: "Pricing", to: "Pricing" },
+  {name: "About", to: "AboutUsTSA"}
   // { name: "Legal", to: "Legal" },
   // { name: "Join", to: "Signup" },
 ];
@@ -38,7 +40,7 @@ const Home = () => {
           className="flex justify-center items-start"
           element={<LandingPage />}
         />
-        <Route path="/AboutUs" element={<AboutUs />} />
+        <Route path="/Info" element={<AboutUs />} />
         <Route path="/Attractions" element={<AttractionsContainer />} />
         <Route
           path={"/Attractions/Mars"}
@@ -109,14 +111,15 @@ const Home = () => {
           }
         />
 
-        <Route path="/Safety" element={<Logistics />} />
+        <Route path="/SafetyLogistics" element={<Logistics />} />
         <Route path="/Pricing" element={<Pricing />} />
 
-        <Route path="/Legal" element={<Legal />} />
+        {/* <Route path="/Legal" element={<Legal />} /> */}
         {/* <Route path="/Testing4" element={<GlobeArcPoints />} /> */}
-        <Route path="/Testing2" element={<MarsGlobe />} />
-        <Route path="/Testing3" element={<NavbarTest />} />
+        {/* <Route path="/Testing2" element={<MarsGlobe />} /> */}
+        {/* <Route path="/Testing3" element={<NavbarTest />} /> */}
         <Route path="/Signup" element={<Signup />} />
+        <Route path="AboutUsTSA" element={<AboutUsTSA />} />
         {/* Outreach (promotion),  */}
       </Routes>
       <Footer />
