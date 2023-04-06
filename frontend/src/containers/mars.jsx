@@ -14,7 +14,7 @@ const canyon = {
       our solar system, all 1,850 miles of it.
     </p>
   ),
-  imgUrl: "/src/assets/mars/canyon.jpg",
+  imgUrl: "/images/mars/canyon.jpg",
 };
 const fossae = {
   lat: -3.2,
@@ -28,7 +28,7 @@ const fossae = {
       UFO crash. Either way, see this unforgettable marvel!
     </p>
   ),
-  imgUrl: "/src/assets/mars/fossae.jpg",
+  imgUrl: "/images/mars/fossae.jpg",
 };
 const mons = {
   lat: 18.65,
@@ -41,7 +41,7 @@ const mons = {
       even greater than its namesake, the legendary Grecian Mount Olympus!{" "}
     </p>
   ),
-  imgUrl: "/src/assets/mars/mons.png",
+  imgUrl: "/images/mars/mons.png",
 };
 const crater = {
   lat: -5.4,
@@ -55,7 +55,7 @@ const crater = {
       Crater. This excursion is related to geology, biology, and biochemistry.
     </p>
   ),
-  imgUrl: "/src/assets/mars/crater.jpg",
+  imgUrl: "/images/mars/crater.jpg",
 };
 // const mount = { lat: -5.08, lng: 137.85, name: "4thing", info: "d" };
 

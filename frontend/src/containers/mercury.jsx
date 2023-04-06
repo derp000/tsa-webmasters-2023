@@ -15,7 +15,7 @@ const caloris = {
       study the Mercury rock composition for signs of previous lava oceans.
     </p>
   ),
-  imgUrl: "/src/assets/mercury/caloris.png",
+  imgUrl: "/images/mercury/caloris.png",
 };
 
 const ghost = {
@@ -29,7 +29,7 @@ const ghost = {
       obscured or completely hidden.
     </p>
   ),
-  imgUrl: "/src/assets/mercury/ghost.png",
+  imgUrl: "/images/mercury/ghost.png",
 };
 
 const pole = {
@@ -45,7 +45,7 @@ const pole = {
       and the Mercury Poles.
     </p>
   ),
-  imgUrl: "/src/assets/mercury/pole.jpg",
+  imgUrl: "/images/mercury/pole.jpg",
 };
 
 const rembrandt = {
@@ -61,7 +61,7 @@ const rembrandt = {
       the wheel and axle were already present on Mercury.
     </p>
   ),
-  imgUrl: "/src/assets/mercury/rembrandt.jpg",
+  imgUrl: "/images/mercury/rembrandt.jpg",
 };
 
 const gData = [caloris, pole, ghost, rembrandt];

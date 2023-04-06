@@ -33,7 +33,7 @@ const GlobeRandomArcs = ({ width, height, startPos }) => {
     <div>
       <Globe
         ref={globeEl}
-        globeImageUrl="/src/assets/mars_uv.jpg"
+        globeImageUrl="/images/mars_uv.jpg"
         arcsData={arcsData}
         arcColor={"color"}
         arcDashLength={() => Math.random()}

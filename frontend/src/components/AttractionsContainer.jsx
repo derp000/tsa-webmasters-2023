@@ -6,36 +6,36 @@ import HeroCenter from "./HeroCenter";
 const cards = [
   <AttractionCard
     title={"Martian Sightseeing"}
-    imgSrc={"src/assets/mars.png"}
+    imgSrc={"images/mars.png"}
     to={"/Attractions/Mars"}
     key="mars"
   />,
   <AttractionCard
     title={"Moon Exploration"}
-    imgSrc="src/assets/moon.jpg"
+    imgSrc="images/moon.jpg"
     to="/Attractions/Moon"
     key="moon"
   />,
   <AttractionCard
     title={"Venus Voyage"}
-    imgSrc="src/assets/venus.jpeg"
+    imgSrc="images/venus.jpeg"
     to="/Attractions/Venus"
     key="venus"
   />,
   <AttractionCard
     title={"Mercury Adventure"}
-    imgSrc={"src/assets/mercury.jpg"}
+    imgSrc={"images/mercury.jpg"}
     to="/Attractions/Mercury"
     key="mercury"
   />,
   <AttractionCard
     title="Coming Soon"
-    imgSrc={"src/assets/constellation.jpg"}
+    imgSrc={"images/constellation.jpg"}
     key="soon_1"
   />,
   <AttractionCard
     title="Coming Soon"
-    imgSrc={"src/assets/constellation.jpg"}
+    imgSrc={"images/constellation.jpg"}
     key="soon_2"
   />,
 ];
@@ -50,7 +50,7 @@ const AttractionsContainer = () => {
 
       <div
         className="flex flex-col w-full border-opacity-50 bg-cover"
-        style={{ backgroundImage: `url(src/assets/constellation.jpg)` }}
+        style={{ backgroundImage: `url(images/constellation.jpg)` }}
       >
         <div className="grid card rounded-box">
           <CardContainer cards={cards} />

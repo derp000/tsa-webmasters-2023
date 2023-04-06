@@ -13,7 +13,7 @@ const rift = {
       ridges and valleys hundreds of kilometers long.
     </p>
   ),
-  imgUrl: "/src/assets/venus/rift.png",
+  imgUrl: "/images/venus/rift.png",
 };
 
 const fotla = {
@@ -27,7 +27,7 @@ const fotla = {
       by vast lava lakes.
     </p>
   ),
-  imgUrl: "/src/assets/venus/fotla.jpg",
+  imgUrl: "/images/venus/fotla.jpg",
 };
 
 const montes = {
@@ -41,7 +41,7 @@ const montes = {
       Montes the brightest spot on Venus.
     </p>
   ),
-  imgUrl: "/src/assets/venus/montes.jpg",
+  imgUrl: "/images/venus/montes.jpg",
 };
 
 const venera = {
@@ -57,7 +57,7 @@ const venera = {
       astronomical success story.
     </p>
   ),
-  imgUrl: "/src/assets/venus/venera.jpg",
+  imgUrl: "/images/venus/venera.jpg",
 };
 
 const gData = [rift, fotla, montes, venera];

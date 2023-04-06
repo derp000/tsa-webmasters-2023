@@ -13,7 +13,7 @@ const tranquil = {
       on the moon.
     </p>
   ),
-  imgUrl: "/src/assets/moon/tranquil.jpg",
+  imgUrl: "/images/moon/tranquil.jpg",
 };
 
 const montes = {
@@ -26,7 +26,7 @@ const montes = {
       15 mission.
     </p>
   ),
-  imgUrl: "/src/assets/moon/montes.png",
+  imgUrl: "/images/moon/montes.png",
 };
 
 const tycho = {
@@ -39,7 +39,7 @@ const tycho = {
       15 mission.
     </p>
   ),
-  imgUrl: "/src/assets/moon/tycho.png",
+  imgUrl: "/images/moon/tycho.png",
 };
 
 const copernicus = {
@@ -53,7 +53,7 @@ const copernicus = {
       bright spot in the dark maria.
     </p>
   ),
-  imgUrl: "/src/assets/moon/copernicus.jpg",
+  imgUrl: "/images/moon/copernicus.jpg",
 };
 
 const oceanus = {
@@ -67,7 +67,7 @@ const oceanus = {
       of the Apollo 12 mission.
     </p>
   ),
-  imgUrl: "/src/assets/moon/oceanus.jpg",
+  imgUrl: "/images/moon/oceanus.jpg",
 };
 
 const arcsData = interpolate([

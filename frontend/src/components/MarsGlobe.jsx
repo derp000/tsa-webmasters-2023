@@ -10,7 +10,7 @@ const MarsGlobe = () => {
         height={1024}
         className="max-w-sm rounded-lg shadow-2xl"
         animateIn={true}
-        globeImageUrl="/src/assets/mars_uv.jpg"
+        globeImageUrl="/images/mars_uv.jpg"
       />
     </div>
   );

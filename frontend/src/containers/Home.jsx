@@ -53,11 +53,11 @@ const Home = () => {
               arcsData={mars.arcsData}
               arcColor={"#c7c56f"}
               gData={mars.gData}
-              globeImg={"/src/assets/mars_uv.jpg"}
+              globeImg={"/images/mars_uv.jpg"}
               markerColor={"orange"}
               startPos={mars.GLOBE_START}
               drawerStyle={"bg-gradient-to-b from-orange-700 to-red-500"}
-              // headerImgUrl={"/src/assets/mars.jpg"}
+              // headerImgUrl={"/images/mars.jpg"}
             />
           }
         />
@@ -69,7 +69,7 @@ const Home = () => {
               body="Explore the surface of the moon just like how the astronauts did five decades ago."
               arcsData={moon.arcsData}
               gData={moon.gData}
-              globeImg={"/src/assets/moon_uv.jpg"}
+              globeImg={"/images/moon_uv.jpg"}
               markerColor={"lightblue"}
               arcColor={"white"}
               startPos={moon.GLOBE_START}
@@ -85,7 +85,7 @@ const Home = () => {
               body="Visit this alien-like planet and observe it from the safety of your Orbit Transition Vehicle."
               arcsData={venus.arcsData}
               gData={venus.gData}
-              globeImg={"/src/assets/venus_uv.jpg"}
+              globeImg={"/images/venus_uv.jpg"}
               markerColor={"lightblue"}
               arcColor={"white"}
               atmosphereColor={"red"}
@@ -102,7 +102,7 @@ const Home = () => {
               body="Find out what this mysterious little planet has in store."
               arcsData={mercury.arcsData}
               gData={mercury.gData}
-              globeImg={"/src/assets/mercury_uv.jpg"}
+              globeImg={"/images/mercury_uv.jpg"}
               markerColor={"lightblue"}
               arcColor={"white"}
               atmosphereColor={"orange"}

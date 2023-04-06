@@ -11,7 +11,7 @@ const reviews = [
   <ReviewCard key="r3" />,
 ];
 
-const bgLink = `url("/src/assets/constellation.jpg")`;
+const bgLink = `url("/images/constellation.jpg")`;
 
 const AttractionNoninteractive = ({ title, gData }) => {
   return (

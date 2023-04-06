@@ -69,36 +69,36 @@ const Signup = () => {
   const cards = [
     <AttractionCard
       title={"Martian Sightseeing"}
-      imgSrc={"src/assets/mars.png"}
+      imgSrc={"images/mars.png"}
       onContentClick={() => setStep(step + 1)}
       key="mars"
     />,
     <AttractionCard
       title={"Moon Exploration"}
-      imgSrc="src/assets/moon.jpg"
+      imgSrc="images/moon.jpg"
       onContentClick={() => setStep(step + 1)}
       key="moon"
     />,
     <AttractionCard
       title={"Venus Voyage"}
-      imgSrc="src/assets/venus.jpeg"
+      imgSrc="images/venus.jpeg"
       onContentClick={() => setStep(step + 1)}
       key="venus"
     />,
     <AttractionCard
       title={"Mercury Adventure"}
-      imgSrc={"src/assets/mercury.jpg"}
+      imgSrc={"images/mercury.jpg"}
       onContentClick={() => setStep(step + 1)}
       key="mercury"
     />,
     <AttractionCard
       title="Coming Soon"
-      imgSrc={"src/assets/constellation.jpg"}
+      imgSrc={"images/constellation.jpg"}
       key="soon_1"
     />,
     <AttractionCard
       title="Coming Soon"
-      imgSrc={"src/assets/constellation.jpg"}
+      imgSrc={"images/constellation.jpg"}
       key="soon_2"
     />,
   ];

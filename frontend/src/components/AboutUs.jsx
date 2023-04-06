@@ -14,7 +14,7 @@ const reviews = [
   <ReviewCard key="r3" />,
 ];
 
-const bgLink = `url("src/assets/constellation.jpg")`;
+const bgLink = `url("images/constellation.jpg")`;
 
 // TODO: mission statement
 // TODO: contact info footer
@@ -26,7 +26,7 @@ const AboutUs = () => {
     <div>
       <HeroImage
         callToAction={text.cta}
-        imgSrc={"src/assets/HuntsvilleRocket.jfif"}
+        imgSrc={"src/images/HuntsvilleRocket.jfif"}
       />
 
       <div className="flex flex-col w-full border-opacity-50 bg-gradient-to-r from-blue-400 to-fuchsia-400">

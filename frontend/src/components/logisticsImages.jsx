@@ -4,7 +4,7 @@ export { vasimr, ocean, landing, crew, charon, otv };
 const vasimr = (
   <img
     className="mt-10 mx-auto md:w-[32rem] md:h-[21rem] w-[32rem] h-[18rem]"
-    src="src/assets/vasimr.jpg"
+    src="images/vasimr.jpg"
     alt="VASIMR engine"
     key="vasimr"
   />
@@ -13,7 +13,7 @@ const vasimr = (
 const ocean = (
   <img
     className="mt-10 mx-auto md:w-[32rem] md:h-[21rem] w-[32rem] h-[18rem]"
-    src="src/assets/newfoundland_nasa.jfif"
+    src="images/newfoundland_nasa.jfif"
     alt="Newfoundland"
     key="newfoundland"
   />
@@ -23,7 +23,7 @@ const ocean = (
 const landing = (
   <img
     className="my-4 mx-auto md:w-[32rem] md:h-[29rem] w-[32rem] h-[29rem]"
-    src="src/assets/landing.jpg"
+    src="images/landing.jpg"
     alt="Landing capsule"
     key="landing"
   />
@@ -32,7 +32,7 @@ const landing = (
 const crew = (
   <img
     className="mt-4 mx-auto md:w-[32rem] md:h-[21rem] w-[32rem] h-[18rem]"
-    src="src/assets/landing_crew.jpg"
+    src="images/landing_crew.jpg"
     alt="landing crew"
   />
 );
@@ -40,7 +40,7 @@ const crew = (
 const charon = (
   <img
     className="mt-10 mx-auto sm:h-[26rem] h-96 w-[16rem]"
-    src="src/assets/charonRocket2.jpg"
+    src="images/charonRocket2.jpg"
   />
 );
 
@@ -48,6 +48,6 @@ const charon = (
 const otv = (
   <img
     className="mt-10 mx-auto md:w-[16rem] md:h-[24rem] w-[16rem] h-[24rem]"
-    src="src/assets/orbiter.jpg"
+    src="images/orbiter.jpg"
   />
 );

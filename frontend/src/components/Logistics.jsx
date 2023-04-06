@@ -7,7 +7,7 @@ import HeroText from "./HeroText";
 import * as text from "./logisticsText";
 import * as img from "./logisticsImages";
 
-const bgLink = `url("src/assets/constellation.jpg")`;
+const bgLink = `url("images/constellation.jpg")`;
 
 // rename as logistics, keep vehicles here but move products to about
 const Logistics = () => {
@@ -15,7 +15,7 @@ const Logistics = () => {
     <div>
       <HeroImage
         callToAction={"This is how we do it."}
-        imgSrc={"src/assets/reentry.jpg"}
+        imgSrc={"images/reentry.jpg"}
       />
       <div className="flex flex-col w-full border-opacity-50 bg-gradient-to-r from-blue-400 to-fuchsia-400">
         <div className="divider before:bg-purple-200 after:bg-purple-200"></div>

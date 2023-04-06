@@ -40,7 +40,7 @@ const LandingPage = () => {
         </div>
       </div>
       <div className="lg:hidden block">
-        <LandingPageMobile imgSrc={"src/assets/mercury.jpg"} />
+        <LandingPageMobile imgSrc={"images/mercury.jpg"} />
       </div>
     </div>
   );
