@@ -15,7 +15,7 @@ const Logistics = () => {
     <div>
       <HeroImage
         callToAction={"This is how we do it."}
-        imgSrc={"src/assets/HuntsvilleRocket.jfif"}
+        imgSrc={"src/assets/reentry.jpg"}
       />
       <div className="flex flex-col w-full border-opacity-50 bg-gradient-to-r from-blue-400 to-fuchsia-400">
         <div className="divider before:bg-purple-200 after:bg-purple-200"></div>
@@ -40,18 +40,24 @@ const Logistics = () => {
             bgLink={bgLink}
           />
         </div>
+        <div className="bg-gradient-to-r from-red-400 to-fuchsia-400">
+          <div className="divider before:bg-purple-200 after:bg-purple-200"></div>
+        </div>
         <div className="grid card rounded-box">
           <HeroText
             body={text.bodyRecoverMid}
-            images={[img.ocean2]}
+            images={[img.landing]}
             multiHero={true}
             bgLink={bgLink}
           />
         </div>
+        <div className="bg-gradient-to-r from-red-400 to-fuchsia-400">
+          <div className="divider before:bg-purple-200 after:bg-purple-200"></div>
+        </div>
         <div className="grid card rounded-box">
           <HeroText
             body={text.bodyRecoverLast}
-            images={[img.ocean2]}
+            images={[img.crew]}
             reverseAlign={true}
             multiHero={true}
             bgLink={bgLink}

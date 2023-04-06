@@ -23,7 +23,7 @@ const LandingPage = () => {
         /> */}
         <div className="text-center">
           <h1 className="text-5xl font-bold">Become the next astronaut.</h1>
-          <p className="py-6">
+          <p className="text-2xl py-6">
             Create a fictitious company and design an appropriate website. The
             website should provide information starting with promotion, basic cd
             information, cost, planning, training, vehicles, safety, launch, and

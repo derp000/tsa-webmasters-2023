@@ -60,16 +60,42 @@ const Signup = () => {
     },
   ];
 
-  const cards = [];
-  for (let i = 0; i < 6; i++) {
-    cards.push(
-      <AttractionCard
-        title={"Title Here"}
-        imgSrc={"src/assets/HuntsvilleRocket.jfif"}
-        onContentClick={() => setStep(step + 1)}
-      />
-    );
-  }
+  const cards = [
+    <AttractionCard
+      title={"Martian Sightseeing"}
+      imgSrc={"src/assets/mars.png"}
+      onContentClick={() => setStep(step + 1)}
+      key="mars"
+    />,
+    <AttractionCard
+      title={"Moon Exploration"}
+      imgSrc="src/assets/moon.jpg"
+      onContentClick={() => setStep(step + 1)}
+      key="moon"
+    />,
+    <AttractionCard
+      title={"Venus Voyage"}
+      imgSrc="src/assets/venus.jpeg"
+      onContentClick={() => setStep(step + 1)}
+      key="venus"
+    />,
+    <AttractionCard
+      title={"Mercury Adventure"}
+      imgSrc={"src/assets/mercury.jpg"}
+      onContentClick={() => setStep(step + 1)}
+      key="mercury"
+    />,
+    <AttractionCard
+      title="Coming Soon"
+      imgSrc={"src/assets/constellation.jpg"}
+      key="soon_1"
+    />,
+    <AttractionCard
+      title="Coming Soon"
+      imgSrc={"src/assets/constellation.jpg"}
+      key="soon_2"
+    />,
+  ];
 
   let renderedTitle = "Ready for an out-of-this-world experience?";
   let renderedStep = (
@@ -147,7 +173,10 @@ const Signup = () => {
             </div>
           </div>
           <div className="hero p-4">
-            <div className="btn btn-primary mb-5" onClick={() => setStep(step - 1)}>
+            <div
+              className="btn btn-primary mb-5"
+              onClick={() => setStep(step - 1)}
+            >
               Previous
             </div>
           </div>
