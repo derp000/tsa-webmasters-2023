@@ -22,7 +22,7 @@ const categories = [
   { name: "Home", to: "Info" },
   { name: "Attractions", to: "Attractions" },
   { name: "Safety/Logistics", to: "SafetyLogistics" },
-  { name: "Pricing", to: "Pricing" },
+  // { name: "Pricing", to: "Pricing" },
   {name: "About", to: "AboutUsTSA"}
   // { name: "Legal", to: "Legal" },
   // { name: "Join", to: "Signup" },
@@ -57,6 +57,7 @@ const Home = () => {
               markerColor={"orange"}
               startPos={mars.GLOBE_START}
               drawerStyle={"bg-gradient-to-b from-orange-700 to-red-500"}
+              // headerImgUrl={"/src/assets/mars.jpg"}
             />
           }
         />
@@ -112,7 +113,7 @@ const Home = () => {
         />
 
         <Route path="/SafetyLogistics" element={<Logistics />} />
-        <Route path="/Pricing" element={<Pricing />} />
+        {/* <Route path="/Pricing" element={<Pricing />} /> */}
 
         {/* <Route path="/Legal" element={<Legal />} /> */}
         {/* <Route path="/Testing4" element={<GlobeArcPoints />} /> */}

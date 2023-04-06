@@ -29,6 +29,12 @@ const criteria = [
     Teaching K-12 is considered equivalent for an astronaut candidate; educators
     are encouraged to apply!
   </p>,
+  <p>
+    The cost of Helios is heavily subsidized by the United States Government,
+    NASA, ESA, and private donors. Our costs are designed to be as affordable as
+    feasible, part of our goal to make space more accessible to the public.
+    Round trip excursions + training cost around $10,000.
+  </p>,
 ];
 
 const Signup = () => {
@@ -132,7 +138,7 @@ const Signup = () => {
         <>
           <Form formContent={formContent} />
           {showError && <Alert error={"Invalid email or phone number!"} />}
-          <div className="hero p-4">
+          <div className="hero p-4 mb-[15rem]">
             <div className="grid grid-cols-2 gap-5">
               <div
                 className="btn btn-primary"
@@ -198,7 +204,7 @@ const Signup = () => {
               <h1 className="md:text-7xl text-5xl font-bold mt-2">
                 You're in good hands.
               </h1>
-              <div className="lg:text-2xl text-2xl max-w-3xl lg:leading-loose leading-loose py-6">
+              <div className="lg:text-2xl text-2xl max-w-3xl lg:leading-loose leading-loose py-6 mb-[20rem]">
                 You'll be guided by professionally trained tour guides with
                 years of aeronautical and astronautical experience. We'll make
                 sure you're trip is the best it can be, or your money back!

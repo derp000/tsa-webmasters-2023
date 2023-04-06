@@ -13,13 +13,10 @@ const reviews = [
 
 const bgLink = `url("/src/assets/constellation.jpg")`;
 
-const AttractionNoninteractive = ({ gData }) => {
+const AttractionNoninteractive = ({ title, gData }) => {
   return (
     <div>
-      <HeroImage
-        callToAction={"Martian Sightseeing"}
-        imgSrc={"/src/assets/HuntsvilleRocket.jfif"}
-      />
+      <HeroImage callToAction={title} />
 
       <div className="flex flex-col w-full border-opacity-50 bg-blue-400">
         {gData.map((location) => (

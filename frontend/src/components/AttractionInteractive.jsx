@@ -7,6 +7,7 @@ import AttractionNoninteractive from "./AttractionNoninteractive";
 const AttractionInteractive = ({
   title,
   body,
+  headerImgUrl,
   arcsData,
   gData,
   startPos,
@@ -98,7 +99,7 @@ const AttractionInteractive = ({
         </div>
       </div>
       <div className="lg:hidden block">
-        <AttractionNoninteractive gData={gData} />
+        <AttractionNoninteractive gData={gData} title={title} />
       </div>
     </>
   );

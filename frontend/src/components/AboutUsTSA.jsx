@@ -1,5 +1,4 @@
 import React from "react";
-import HeroText from "./HeroText";
 import AboutUsTSAWorksCited from "./AboutUsTSAWorksCited";
 import AboutUsTSAFrameworks from "./AboutUsTSAFrameworks";
 
