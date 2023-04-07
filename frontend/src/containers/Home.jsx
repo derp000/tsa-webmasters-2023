@@ -2,13 +2,10 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 import Navbar from "../components/Navbar";
-import { LandingPage, AboutUs, Pricing, Legal } from "../components";
+import { LandingPage, AboutUs } from "../components";
 import Footer from "../components/Footer";
-import NavbarTest from "../components/NavbarTest";
 import Signup from "../components/Signup";
 import Logistics from "../components/Logistics";
-import GlobeWithPoints from "../components/GlobeWithPoints";
-import MarsGlobe from "../components/MarsGlobe";
 import AttractionsContainer from "../components/AttractionsContainer";
 import AttractionInteractive from "../components/AttractionInteractive";
 import AboutUsTSA from "../components/AboutUsTSA";
@@ -19,11 +16,11 @@ import * as venus from "./venus";
 import * as mercury from "./mercury";
 
 const categories = [
-  { name: "Home", to: "Info" },
+  { name: "Home", to: "Home" },
   { name: "Attractions", to: "Attractions" },
   { name: "Safety/Logistics", to: "SafetyLogistics" },
   // { name: "Pricing", to: "Pricing" },
-  {name: "About", to: "AboutUsTSA"}
+  { name: "About", to: "AboutUsTSA" },
   // { name: "Legal", to: "Legal" },
   // { name: "Join", to: "Signup" },
 ];
@@ -40,7 +37,7 @@ const Home = () => {
           className="flex justify-center items-start"
           element={<LandingPage />}
         />
-        <Route path="/Info" element={<AboutUs />} />
+        <Route path="/Home" element={<AboutUs />} />
         <Route path="/Attractions" element={<AttractionsContainer />} />
         <Route
           path={"/Attractions/Mars"}
@@ -48,7 +45,7 @@ const Home = () => {
             <AttractionInteractive
               title={"Martian Sightseeing"}
               body={
-                "Learn about some of the most awe-inspiring landscapes Mars you'll visit. Click on a marker to learn more."
+                "Learn about some of the most awe-inspiring landscapes Mars you'll visit. Drag on the globe and click on a marker to learn more."
               }
               arcsData={mars.arcsData}
               arcColor={"#c7c56f"}
@@ -66,7 +63,7 @@ const Home = () => {
           element={
             <AttractionInteractive
               title="Moon Exploration"
-              body="Explore the surface of the moon just like how the astronauts did five decades ago."
+              body="Explore the surface of the moon just like how the astronauts did five decades ago. Drag on the globe and click on a marker to learn more about where you'll visit."
               arcsData={moon.arcsData}
               gData={moon.gData}
               globeImg={"/images/moon_uv.jpg"}
@@ -82,7 +79,7 @@ const Home = () => {
           element={
             <AttractionInteractive
               title="Venus Voyage"
-              body="Visit this alien-like planet and observe it from the safety of your Orbit Transition Vehicle."
+              body="Visit this alien-like planet and observe it from the safety of your Orbit Transition Vehicle. Drag on the globe and click on a marker to learn more."
               arcsData={venus.arcsData}
               gData={venus.gData}
               globeImg={"/images/venus_uv.jpg"}
@@ -99,7 +96,7 @@ const Home = () => {
           element={
             <AttractionInteractive
               title="Mercury Adventure"
-              body="Find out what this mysterious little planet has in store."
+              body="Find out what this mysterious little planet has in store. Drag on the globe and click on a marker to learn more about where you'll visit."
               arcsData={mercury.arcsData}
               gData={mercury.gData}
               globeImg={"/images/mercury_uv.jpg"}

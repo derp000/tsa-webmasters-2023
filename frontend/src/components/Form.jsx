@@ -3,7 +3,10 @@ import Label from "./Label";
 
 const Form = ({ formContent }) => {
   return (
-    <div className="hero">
+    <div
+      className="hero bg-cover"
+      style={{ backgroundImage: `url(images/constellation.jpg)` }}
+    >
       <div className="form-control w-full max-w-lg">
         {formContent.map((label) => (
           <Label

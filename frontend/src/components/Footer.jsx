@@ -5,18 +5,23 @@ const Footer = () => {
   return (
     <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
       <div className="grid grid-flow-col gap-4">
-        <div className="link link-hover"><NavLink to="/Info">Home</NavLink></div>
+        <div className="link link-hover">
+          <NavLink to="/Home">Home</NavLink>
+        </div>
         <div className="link link-hover">
           <NavLink to="/Attractions">Attractions</NavLink>
         </div>
-        <div className="link link-hover"><NavLink to="SafetyLogistics">Safety & Logistics</NavLink></div>
-        <div className="link link-hover"><NavLink to="AboutUsTSA">About</NavLink></div>
+        <div className="link link-hover">
+          <NavLink to="SafetyLogistics">Safety & Logistics</NavLink>
+        </div>
+        <div className="link link-hover">
+          <NavLink to="AboutUsTSA">About</NavLink>
+        </div>
         <div className="link link-hover">
           <NavLink to="/Signup">Join</NavLink>
         </div>
       </div>
-      <div>
-        {/* social media */}
+      {/* <div>
         <div className="grid grid-flow-col gap-4">
           <a>
             <svg
@@ -52,7 +57,7 @@ const Footer = () => {
             </svg>
           </a>
         </div>
-      </div>
+      </div> */}
       <div>
         <p>Webmaster Team #2192-1</p>
       </div>

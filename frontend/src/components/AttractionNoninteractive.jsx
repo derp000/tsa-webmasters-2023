@@ -4,6 +4,8 @@ import HeroImage from "./HeroImage";
 import HeroReview from "./HeroReview";
 import HeroText from "./HeroText";
 import ReviewCard from "./ReviewCard";
+import { Link } from "react-router-dom";
+import { XCircleIcon } from "@heroicons/react/20/solid";
 
 const reviews = [
   <ReviewCard key="r1" />,
@@ -18,10 +20,15 @@ const AttractionNoninteractive = ({ title, gData }) => {
     <div>
       <HeroImage callToAction={title} />
 
-      <div className="flex flex-col w-full border-opacity-50 bg-blue-400">
+      <div className="flex flex-col w-full border-opacity-50 bg-gradient-to-r from-blue-400 to-fuchsia-400">
+        <div className="divider before:bg-purple-200 after:bg-purple-200"></div>
+        <div className="bg-black w-full h-10">
+          <Link to="/Attractions" className="absolute ml-4 mt-4 h-7 w-7">
+            <XCircleIcon className="fill-white" />
+          </Link>
+        </div>
         {gData.map((location) => (
           <>
-            <div className="divider before:bg-purple-900 after:bg-purple-900"></div>
             <div className="grid card rounded-box">
               <HeroText
                 title={location.name}
@@ -29,16 +36,16 @@ const AttractionNoninteractive = ({ title, gData }) => {
                 images={[
                   <img
                     src={location.imgUrl}
-                    className="mt-10 mx-auto md:w-[48rem] md:h-[28rem] w-[32rem] h-[18rem]"
+                    className="mt-10 mx-auto md:w-[48rem] md:h-[28rem] w-[32rem] h-[18rem] rounded-2xl"
                     key={location.name}
                   />,
                 ]}
                 bgLink={bgLink}
               />
             </div>
+            <div className="divider before:bg-purple-200 after:bg-purple-200"></div>
           </>
         ))}
-        <div className="divider before:bg-purple-900 after:bg-purple-900"></div>
         {/* <div className="divider before:bg-purple-900 after:bg-purple-900"></div>
         <div className="grid card rounded-box">
           <HeroText

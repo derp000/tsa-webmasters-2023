@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import { React, useState } from "react";
 import Confetti from "react-confetti";
 
 import Alert from "./Alert";
@@ -120,9 +120,9 @@ const Signup = () => {
       renderedStep = (
         <>
           <Checklist criteria={criteria} className="w-full content-center" />
-          <div className="hero p-4">
+          <div className="hero p-4 bg-black">
             <div
-              className="btn btn-primary mb-4"
+              className="btn btn-primary mb-4 mt-12"
               onClick={() => setStep(step + 1)}
             >
               Next
@@ -135,10 +135,16 @@ const Signup = () => {
     case 2:
       renderedTitle = "Fill out necessary details.";
       renderedStep = (
-        <>
+        <div
+          className="bg-cover"
+          style={{ backgroundImage: `url(images/constellation.jpg)` }}
+        >
           <Form formContent={formContent} />
           {showError && <Alert error={"Invalid email or phone number!"} />}
-          <div className="hero p-4 mb-[15rem]">
+          <div
+            className="hero p-4 bg-cover"
+            style={{ backgroundImage: `url(images/constellation.jpg)` }}
+          >
             <div className="grid grid-cols-2 gap-5">
               <div
                 className="btn btn-primary"
@@ -165,7 +171,7 @@ const Signup = () => {
             </div>
           </div>
           ;
-        </>
+        </div>
       );
       break;
     // choose product
@@ -173,12 +179,18 @@ const Signup = () => {
       renderedTitle = "Choose your once-in-a-lifetime trip!";
       renderedStep = (
         <>
-          <div className="flex flex-col w-full border-opacity-50">
+          <div
+            className="flex flex-col w-full border-opacity-50 bg-cover"
+            style={{ backgroundImage: `url(images/constellation.jpg)` }}
+          >
             <div className="grid card rounded-box">
               <CardContainer cards={cards} />
             </div>
           </div>
-          <div className="hero p-4">
+          <div
+            className="hero p-4 bg-cover"
+            style={{ backgroundImage: `url(images/constellation.jpg)` }}
+          >
             <div
               className="btn btn-primary mb-5"
               onClick={() => setStep(step - 1)}
@@ -194,14 +206,17 @@ const Signup = () => {
       renderedStep = (
         <>
           <Confetti
-            width={width}
+            width={width - 20}
             height={height}
             numberOfPieces={200}
             recycle={false}
           />
-          <div className="hero h-fit px-2">
+          <div
+            className="hero h-fit px-2 bg-cover"
+            style={{ backgroundImage: `url(images/constellation.jpg)` }}
+          >
             <div className="max-w-5xl text-center">
-              <h1 className="md:text-7xl text-5xl font-bold mt-2">
+              <h1 className="md:text-7xl text-5xl font-bold mt-44">
                 You're in good hands.
               </h1>
               <div className="lg:text-2xl text-2xl max-w-3xl lg:leading-loose leading-loose py-6 mb-[20rem]">
@@ -219,7 +234,7 @@ const Signup = () => {
       renderedStep = (
         <>
           <Checklist criteria={criteria} className="w-full content-center" />
-          <div className="hero p-4">
+          <div className="hero p-4 bg-black">
             <div className="btn btn-primary" onClick={() => setStep(step + 1)}>
               Next
             </div>
@@ -231,8 +246,11 @@ const Signup = () => {
 
   return (
     <div>
-      <HeroImage callToAction={renderedTitle} />
-      <div className="hero py-5">
+      <HeroImage
+        callToAction={renderedTitle}
+        imgSrc={"images/constellation.jpg"}
+      />
+      <div className="hero py-5 bg-black">
         <StepsNav currentStep={step} />
       </div>
       {renderedStep}

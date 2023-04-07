@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
 const LandingPageMobile = ({ imgSrc }) => {
   return (
@@ -13,16 +12,18 @@ const LandingPageMobile = ({ imgSrc }) => {
           className="max-w-sm rounded-lg shadow-2xl"
         /> */}
         <div className="text-center">
-          <h1 className="text-5xl font-bold">Become the next astronaut.</h1>
+          <h1 className="text-5xl font-bold">
+            The sky's the limit...or is it?
+          </h1>
           <p className="text-2xl py-6">
-            Create a fictitious company and design an appropriate website. The
-            website should provide information starting with promotion, basic cd
-            information, cost, planning, training, vehicles, safety, launch, and
-            recovery.
+            Helios name comes from the Greek God Helios. Helios, the sun god,
+            traveled through the skies in a chariot. We felt this name was
+            fitting for our company, which trains astronauts and gives them the
+            opportunity to travel around the solar system.
           </p>
-          <div className="btn btn-secondary">
-            <NavLink to="/Info">Get Started</NavLink>
-          </div>
+          <a href="/Home">
+            <div className="btn btn-secondary">Get Started</div>
+          </a>
         </div>
       </div>
     </div>

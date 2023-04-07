@@ -7,7 +7,6 @@ import AttractionNoninteractive from "./AttractionNoninteractive";
 const AttractionInteractive = ({
   title,
   body,
-  headerImgUrl,
   arcsData,
   gData,
   startPos,
@@ -93,7 +92,7 @@ const AttractionInteractive = ({
             <div className="text-6xl font-bold mb-5">{name}</div>
             <div className="text-2xl mb-5">{info}</div>
             <div>
-              <img src={imgUrl} className="rounded-lg max-h-[30rem]" />
+              <img src={imgUrl} className="rounded-2xl max-h-[30rem]" />
             </div>
           </div>
         </div>

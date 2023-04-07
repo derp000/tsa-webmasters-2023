@@ -1,7 +1,5 @@
 import React from "react";
-import HeroCenter from "./HeroCenter";
 import HeroImage from "./HeroImage";
-import HeroReview from "./HeroReview";
 import HeroText from "./HeroText";
 import ReviewCard from "./ReviewCard";
 

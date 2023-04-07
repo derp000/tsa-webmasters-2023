@@ -1,7 +1,6 @@
 import React from "react";
 import GlobeRandomArcs from "./GlobeRandomArcs";
 import useWindowDimensions from "./viewport";
-import { NavLink } from "react-router-dom";
 import LandingPageMobile from "./LandingPageMobile";
 
 const GLOBE_START = { lat: 0, lng: 0, altitude: 2.0 };
@@ -33,9 +32,11 @@ const LandingPage = () => {
               fitting for our company, which trains astronauts and gives them
               the opportunity to travel around the solar system.
             </p>
-            <div className="btn btn-secondary">
-              <NavLink to="/Info">Get Started</NavLink>
-            </div>
+            {/* <NavLink to="/Info"> */}
+            <a href="/Home">
+              <div className="btn btn-secondary">Get Started</div>
+            </a>
+            {/* </NavLink> */}
           </div>
         </div>
       </div>

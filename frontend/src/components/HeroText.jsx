@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from "react";
+import { React } from "react";
 
 const HeroText = ({
   heading,
@@ -69,9 +69,7 @@ const HeroText = ({
           {title && (
             <h1 className="md:text-7xl text-5xl font-bold mt-2">{title}</h1>
           )}
-          {!title && (
-            <div className="mt-4"></div>
-          )}
+          {!title && <div className="mt-4"></div>}
           <div
             className={`md:inline-flex md:gap-10 md:items-start ${
               heading && title ? "md:mt-10" : ""

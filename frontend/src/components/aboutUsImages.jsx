@@ -22,7 +22,7 @@ const esa = (
 // was sm:48rem
 const huntsville = (
   <img
-    className="mt-10 mx-auto sm:h-[46rem] h-96 w-[32rem]"
+    className="mt-10 mx-auto sm:h-[46rem] h-96 w-[32rem] rounded-2xl"
     src="images/HuntsvilleRocket.jpg"
     alt="Rockets on display in Huntsville"
     key="huntsville"
@@ -33,7 +33,7 @@ const huntsville = (
 // lg:mt-10 md:h-64 md:w-64 sm:h-48 sm:w-48 sm:block hidden
 const meteo = (
   <img
-    className="mt-10 mx-auto md:w-[48rem] md:h-[28rem] w-[32rem] h-[18rem]"
+    className="mt-10 mx-auto md:w-[48rem] md:h-[28rem] w-[32rem] h-[18rem] rounded-2xl"
     src="images/meteorology.jpg"
     alt="Clouds photographed by the ISS"
     key="meteo"

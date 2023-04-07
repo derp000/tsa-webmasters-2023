@@ -1,10 +1,7 @@
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
-import {
-  Bars3Icon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { Disclosure } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const Navbar = ({ categories }) => {
   return (
@@ -58,7 +55,9 @@ const Navbar = ({ categories }) => {
                         ? "bg-purple-600 text-white px-3 py-2 rounded-md text-sm font-medium"
                         : "text-gray-300 hover:bg-purple-600 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                     }
-                  >Join</NavLink>
+                  >
+                    Join
+                  </NavLink>
                 </div>
               </div>
             </div>
