@@ -4,7 +4,10 @@ import AboutUsTSAFrameworks from "./AboutUsTSAFrameworks";
 import { Document, Page } from "react-pdf/dist/esm/entry.vite";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+
 import tsaPDF from "../WebDesign.pdf";
+import copyrightPDF from "../Copyright_Webmaster2192_1.pdf";
+import planPDF from "../PlanOfWork_Webmaster2192_1.pdf";
 
 import useWindowDimensions from "./viewport";
 
@@ -30,9 +33,25 @@ const AboutUsTSA = () => {
               </div>
             </div> */}
             <div className="py-5">
+              <h1 className="font-bold md:text-4xl text-lg">Reference</h1>
+              <div className="md:text-2xl text-md py-2">
+                <ul className="list-none italic text-emerald-200">
+                  <li className="mb-2">
+                    <a href={copyrightPDF}>Copyright Checklist link</a>
+                  </li>
+                  <li>
+                    <a href={planPDF}>Plan of Work link</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="py-5">
               <h1 className="font-bold md:text-4xl text-lg">
                 Research Document and Works Cited
               </h1>
+              <p className="italic md:text-2xl text-md py-2 text-emerald-200">
+                <a href={tsaPDF}>File link</a>
+              </p>
               <Document file={tsaPDF} onLoadSuccess={onDocumentLoadSuccess}>
                 {Array.from(new Array(numPages), (page, i) => (
                   <Page
